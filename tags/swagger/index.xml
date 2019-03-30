@@ -17,7 +17,8 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dixel.github.io/post/2019-03-30-3-clojure-swagger/</guid>
-      <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it. This approach significantly reduces the communicational overhead on the first steps of the development, but unfortunately doesn&amp;rsquo;t completely protect the teams from the follow-up changes and discussions.</description>
+      <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
+I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
     </item>
     
   </channel>
