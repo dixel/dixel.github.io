@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clojure on CHANGES.md</title>
-    <link>https://example.com/tags/clojure/</link>
+    <link>https://dixel.github.io/tags/clojure/</link>
     <description>Recent content in Clojure on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dixel.github.io/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>3 libraries to work with swagger in clojure</title>
-      <link>https://example.com/post/2019-03-30-3-clojure-swagger/</link>
+      <link>https://dixel.github.io/post/2019-03-30-3-clojure-swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2019-03-30-3-clojure-swagger/</guid>
+      <guid>https://dixel.github.io/post/2019-03-30-3-clojure-swagger/</guid>
       <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many polyglot organizations. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team functionality, the parties first agree on the contract, review it, and then start the implementation. This approach significantly reduces the communicational overhead on the first steps of the development, but unfortunately doesn&amp;rsquo;t completely protect the teams from the follow-up changes and discussions.</description>
     </item>
     

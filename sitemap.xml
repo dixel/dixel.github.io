@@ -3,52 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://dixel.github.io/about/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/2019-03-30-3-clojure-swagger/</loc>
+    <loc>https://dixel.github.io/post/2019-03-30-3-clojure-swagger/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://dixel.github.io/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://dixel.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/clojure/</loc>
+    <loc>https://dixel.github.io/tags/clojure/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/openapi/</loc>
+    <loc>https://dixel.github.io/tags/openapi/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/post/</loc>
+    <loc>https://dixel.github.io/post/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/swagger/</loc>
+    <loc>https://dixel.github.io/tags/swagger/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://dixel.github.io/tags/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
