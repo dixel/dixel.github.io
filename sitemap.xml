@@ -3,52 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dixel.github.io/about/</loc>
+    <loc>http://www.changes.md/about/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dixel.github.io/post/2019-03-30-3-clojure-swagger/</loc>
+    <loc>http://www.changes.md/post/2019-03-30-3-clojure-swagger/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dixel.github.io/</loc>
+    <loc>http://www.changes.md/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dixel.github.io/categories/</loc>
+    <loc>http://www.changes.md/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dixel.github.io/tags/clojure/</loc>
+    <loc>http://www.changes.md/tags/clojure/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dixel.github.io/tags/openapi/</loc>
+    <loc>http://www.changes.md/tags/openapi/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dixel.github.io/post/</loc>
+    <loc>http://www.changes.md/post/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dixel.github.io/tags/swagger/</loc>
+    <loc>http://www.changes.md/tags/swagger/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dixel.github.io/tags/</loc>
+    <loc>http://www.changes.md/tags/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

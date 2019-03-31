@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CHANGES.md</title>
-    <link>https://dixel.github.io/tags/</link>
+    <link>http://www.changes.md/tags/</link>
     <description>Recent content in Tags on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dixel.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.changes.md/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Clojure</title>
-      <link>https://dixel.github.io/tags/clojure/</link>
+      <link>http://www.changes.md/tags/clojure/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dixel.github.io/tags/clojure/</guid>
+      <guid>http://www.changes.md/tags/clojure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Openapi</title>
-      <link>https://dixel.github.io/tags/openapi/</link>
+      <link>http://www.changes.md/tags/openapi/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dixel.github.io/tags/openapi/</guid>
+      <guid>http://www.changes.md/tags/openapi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Swagger</title>
-      <link>https://dixel.github.io/tags/swagger/</link>
+      <link>http://www.changes.md/tags/swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dixel.github.io/tags/swagger/</guid>
+      <guid>http://www.changes.md/tags/swagger/</guid>
       <description></description>
     </item>
     

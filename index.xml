@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CHANGES.md</title>
-    <link>https://dixel.github.io/</link>
+    <link>http://www.changes.md/</link>
     <description>Recent content on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dixel.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.changes.md/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://dixel.github.io/about/</link>
+      <link>http://www.changes.md/about/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dixel.github.io/about/</guid>
+      <guid>http://www.changes.md/about/</guid>
       <description> Notes about my life  1996 2008 2009 2011 2015 2018 -- Saint-Petersburg ------------------------------- Hamburg ------------------------- ------- Programming --- Embedded ---- High load ---- Data --------------------------- ------- C/C++ ---- Python ------------ Erlang ----- Clojure ------------------------- ------------- Guitar ------------------------------------------ Parenting ----------- --------------- Climbing --------- Biking ---- Snowboarding -------------------------  </description>
     </item>
     
     <item>
       <title>3 libraries to work with swagger in clojure</title>
-      <link>https://dixel.github.io/post/2019-03-30-3-clojure-swagger/</link>
+      <link>http://www.changes.md/post/2019-03-30-3-clojure-swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dixel.github.io/post/2019-03-30-3-clojure-swagger/</guid>
+      <guid>http://www.changes.md/post/2019-03-30-3-clojure-swagger/</guid>
       <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
 I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
     </item>
