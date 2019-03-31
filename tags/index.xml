@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CHANGES.md</title>
-    <link>http://www.changes.md/tags/</link>
+    <link>https://www.changes.md/tags/</link>
     <description>Recent content in Tags on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.changes.md/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.changes.md/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Clojure</title>
-      <link>http://www.changes.md/tags/clojure/</link>
+      <link>https://www.changes.md/tags/clojure/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.changes.md/tags/clojure/</guid>
+      <guid>https://www.changes.md/tags/clojure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Openapi</title>
-      <link>http://www.changes.md/tags/openapi/</link>
+      <link>https://www.changes.md/tags/openapi/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.changes.md/tags/openapi/</guid>
+      <guid>https://www.changes.md/tags/openapi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Swagger</title>
-      <link>http://www.changes.md/tags/swagger/</link>
+      <link>https://www.changes.md/tags/swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.changes.md/tags/swagger/</guid>
+      <guid>https://www.changes.md/tags/swagger/</guid>
       <description></description>
     </item>
     

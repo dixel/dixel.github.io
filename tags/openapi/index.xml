@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Openapi on CHANGES.md</title>
-    <link>http://www.changes.md/tags/openapi/</link>
+    <link>https://www.changes.md/tags/openapi/</link>
     <description>Recent content in Openapi on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.changes.md/tags/openapi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.changes.md/tags/openapi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>3 libraries to work with swagger in clojure</title>
-      <link>http://www.changes.md/post/2019-03-30-3-clojure-swagger/</link>
+      <link>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.changes.md/post/2019-03-30-3-clojure-swagger/</guid>
+      <guid>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</guid>
       <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
 I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
     </item>
