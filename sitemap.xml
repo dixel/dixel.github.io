@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.changes.md/post/simple-data-clojure/</loc>
+    <lastmod>2019-04-06T23:44:14+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.changes.md/about/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
   </url>
@@ -14,7 +19,7 @@
   
   <url>
     <loc>https://www.changes.md/</loc>
-    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-06T23:44:14+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -37,7 +42,7 @@
   
   <url>
     <loc>https://www.changes.md/post/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-06T23:44:14+02:00</lastmod>
     <priority>0</priority>
   </url>
   

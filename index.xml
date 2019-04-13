@@ -6,10 +6,20 @@
     <description>Recent content on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Apr 2019 23:44:14 +0200</lastBuildDate>
     
 	<atom:link href="https://www.changes.md/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Simple data-driven applications with Clojure</title>
+      <link>https://www.changes.md/post/simple-data-clojure/</link>
+      <pubDate>Sat, 06 Apr 2019 23:44:14 +0200</pubDate>
+      
+      <guid>https://www.changes.md/post/simple-data-clojure/</guid>
+      <description>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
+Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</description>
+    </item>
     
     <item>
       <title>About</title>

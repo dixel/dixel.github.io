@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Simple data-driven applications with Clojure :: CHANGES.md</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
+Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://www.changes.md/post/simple-data-clojure/" />
+
+
+<link rel="stylesheet" href="https://www.changes.md/assets/style.css">
+
+  <link rel="stylesheet" href="https://www.changes.md/assets/green.css">
+
+
+
+<link rel="stylesheet" href="https://www.changes.md/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.changes.md/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://www.changes.md/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Simple data-driven applications with Clojure :: CHANGES.md — " />
+<meta name="twitter:description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
+Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto." />
+<meta name="twitter:site" content="https://www.changes.md" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Simple data-driven applications with Clojure :: CHANGES.md — ">
+<meta property="og:description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
+Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto." />
+<meta property="og:url" content="https://www.changes.md/post/simple-data-clojure/" />
+<meta property="og:site_name" content="Simple data-driven applications with Clojure" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-04-06 23:44:14 &#43;0200 CEST" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    CHANGES.md
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dixel">Github</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/BACuTPOH">Twitter</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="https://github.com/dixel">Github</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/BACuTPOH">Twitter</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="https://www.changes.md/post/simple-data-clojure/">Simple data-driven applications with Clojure</a></h1>
+    <div class="post-meta">
+      <span class="post-date">
+        2019-04-06
+      </span>
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      <p>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api.
+Just getting the tooling right sometimes may be troublesome.
+Here&rsquo;s an example on how things can work out in clojure.</p>
+
+<p>Let&rsquo;s say we have an SQL-based engine like <a href="https://prestosql.io/">Presto</a> (or <a href="https://prestodb.github.io/">Presto</a>)
+as the main interface to the datalake.
+Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</p>
+
+<ol>
+<li>Getting started with a small template (ring application with presto driver managed by mount).</li>
+</ol>
+
+<pre><code class="language-bash">lein new ferry62 changes +presto
+</code></pre>
+
+<ol>
+<li>Checking the project structure.</li>
+</ol>
+
+<pre><code class="language-bash">.
+├── dev
+│   └── user.clj         # REPL (helpers to get best UX from REPL-driven development)
+├── Dockerfile
+├── project.clj
+├── README.md
+├── resources
+│   └── queries
+│       └── example.sql  # SQL templates
+├── src
+│   └── changes
+│       ├── api.clj      # API routing (&quot;/path&quot; -&gt; handler mappings)
+│       ├── core.clj
+│       ├── handlers.clj
+│       └── presto.clj
+</code></pre>
+
+<p>You won&rsquo;t see to much of Clojure code here. It is mainly defined by it&rsquo;s interfaces:</p>
+
+<ul>
+<li>Data source (presto engine)<br /></li>
+<li>API<br /></li>
+</ul>
+
+<p>Easy!</p>
+
+<p><img src="/static/app.png" alt="resource" /></p>
+
+<p>Even if you never worked with Clojure, it&rsquo;s quite easy to get started. Once you fight your way through the syntax, you
+may realise that there are not so many things happening in the application apart from what you actually wanted to do - link
+your data source to the API.</p>
+
+<p>Let&rsquo;s get our hands dirty!</p>
+
+<p>First you&rsquo;d need to install <a href="https://leiningen.org/">leiningen</a> - the tool for building Clojure projects and managing project dependencies.</p>
+
+<p>You can do it with <code>brew</code> in Mac, or by simply following the instructions on the website to install it as a script.</p>
+
+<pre><code class="language-bash">lein run
+curl http://localhost:4040/ping
+</code></pre>
+
+<p>And if you&rsquo;re into <a href="https://clojure.org/guides/repl/introduction">REPL</a>:</p>
+
+<pre><code class="language-bash">lein repl
+</code></pre>
+
+<p>You can docker-compose yourself an hdfs+hive+presto setup locally:</p>
+
+<pre><code class="language-bash">git clone https://github.com/big-data-europe/docker-hive
+cd docker-hive
+docker-compose up -d
+# ... wait until presto server starts
+</code></pre>
+
+<p>&hellip; and start exploring the storage and run the operations against it</p>
+
+<pre><code class="language-scheme">(start)
+(presto-query &quot;SELECT 1&quot;)
+; -&gt; {:col0 1}
+</code></pre>
+
+<p>Let&rsquo;s get a bit behind the scenes of what actually happened here.
+<code>(start)</code> is a function call that tells <a href="https://github.com/tolitius/mount">mount</a> to start the applicatoin.
+Mount is very compact component management library pursuing the goal of having minimal feasible way of
+managing statefull components of your application. I personally really like this approach for both REPL-driven
+development process and also for managing artifacts.</p>
+
+<p>In our scenario there are only two components: the API and the database connection.</p>
+
+<p><code>presto-query</code> is a helper function that&rsquo;s intended to simplify the process of working with the data from REPL.</p>
+
+<p>At this point we simply started our application and made sure that our Presto connector works.</p>
+
+<p>What if we&rsquo;d actually want to enrich our application with new functionality?</p>
+
+<p>Here <a href="https://www.hugsql.org/">hugsql</a> comes into play and allows you to structure the interactions with your database in a form of
+template queries.</p>
+
+<pre><code class="language-sql">-- resources/queries/example.sql
+-- :name sample-fields-query :? :1
+-- :doc sample fields echo query
+SELECT
+  :name   AS name
+  ,:age   AS age
+  ,:date  AS datem
+</code></pre>
+
+<p>Here is the way those functions can be rendered:</p>
+
+<pre><code class="language-scheme">(hugsql/def-sqlvec-fns &quot;queries/example.sql&quot;)
+</code></pre>
+
+<p>Here&rsquo;s the example of using the rendered template functions:</p>
+
+<pre><code class="language-scheme">(let [db-vec    (presto/sample-fields-query-sqlvec
+                 {:name &quot;Banana&quot; :age 25 :date &quot;2018-11-11&quot;})
+      db-result (presto/query-cached db-vec)]
+</code></pre>
+
+<p>API routing is simply defined as a case statement in <code>api.clj</code>:</p>
+
+<pre><code class="language-scheme">(case (:uri request)
+  &quot;/sample&quot;  (handlers/sample-fields request)
+  &quot;/ping&quot; (handlers/pong request)
+  {:status 400 :body (str &quot;bad request: &quot; (:uri request))})
+</code></pre>
+
+<p>The API handler functions do nothing but convert one data structure into another.</p>
+
+<p>I think this is the main selling point of Ring-based applications, if you want, you can manage completely
+immutable codebase for your API handlers.</p>
+
+<pre><code class="language-scheme">(defn pong
+  [request]
+  {:status 200
+   :body {:result :pong}
+   :headers {&quot;Content-Type&quot; &quot;application/json&quot;}})
+</code></pre>
+
+<p>Those are the main points where the application may be extended.</p>
+
+<ul>
+<li>api.clj - for adding new routes</li>
+<li>handlers.clj - for the data transformation/mapping of the API requests to the database queries</li>
+<li>*.sql resources file - for managing the database queries</li>
+</ul>
+
+<p>In a follow-up posts I&rsquo;ll explain how to use different REST (or GraphQL) backends
+and handle other storage solutions.</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="https://www.changes.md/post/2019-03-30-3-clojure-swagger/">
+                <span class="button__text">3 libraries to work with swagger in clojure</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://www.changes.md/assets/main.js"></script>
+<script src="https://www.changes.md/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+ <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(45470124, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/45470124" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
+
+</body>
+</html>
