@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Simple data-driven applications with Clojure</title>
+      <title>Simple data-driven applications in Clojure</title>
       <link>https://www.changes.md/post/simple-data-clojure/</link>
       <pubDate>Sat, 06 Apr 2019 23:44:14 +0200</pubDate>
       
@@ -22,7 +22,7 @@ Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the m
     </item>
     
     <item>
-      <title>3 libraries to work with swagger in clojure</title>
+      <title>3 libraries to work with swagger in Clojure</title>
       <link>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
