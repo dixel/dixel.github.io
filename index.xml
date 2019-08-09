@@ -6,10 +6,19 @@
     <description>Recent content on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Apr 2019 23:44:14 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2019 12:09:08 +0200</lastBuildDate>
     
 	<atom:link href="https://www.changes.md/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Complicated data-driven applications</title>
+      <link>https://www.changes.md/post/stuff/</link>
+      <pubDate>Wed, 01 May 2019 12:09:08 +0200</pubDate>
+      
+      <guid>https://www.changes.md/post/stuff/</guid>
+      <description>Any design is not perfect. There needs to be a way to evolve away from any decision. Components have different lifecycles. Components have different levels of criticality. Those components should have a very clean interface between each other and an outstanding level of isolation. Replaceable &amp;gt; Extendable, because the latter is more opinionated. The lifetime of the components should be challenged at all times. Proven technologies should be maintained in a conservative way.</description>
+    </item>
     
     <item>
       <title>Simple data-driven applications in Clojure</title>
