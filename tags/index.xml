@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CHANGES.md</title>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Clojure</title>
+      <title>clojure</title>
       <link>https://www.changes.md/tags/clojure/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>Openapi</title>
+      <title>openapi</title>
       <link>https://www.changes.md/tags/openapi/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title>Swagger</title>
+      <title>swagger</title>
       <link>https://www.changes.md/tags/swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       

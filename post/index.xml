@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on CHANGES.md</title>
@@ -6,10 +6,19 @@
     <description>Recent content in Posts on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2019 12:09:08 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 23:13:46 +0100</lastBuildDate>
     
 	<atom:link href="https://www.changes.md/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mastering the Tooling around Clojure Data Analysis</title>
+      <link>https://www.changes.md/post/2019-12-08-mastering-data/</link>
+      <pubDate>Sun, 08 Dec 2019 23:13:46 +0100</pubDate>
+      
+      <guid>https://www.changes.md/post/2019-12-08-mastering-data/</guid>
+      <description>Mastering the Tooling around Clojure Data Analysis My December present to myself was a series of books. One of them was called &amp;ldquo;Mastering Clojure Data Analysis&amp;rdquo; by Eric Rochester. It contains a comprehensive set of examples on analysing and visualising data using Clojure. I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with daily work, so I thought &amp;ldquo;why now?&amp;quot;. Once I got the book, I realised what&#39;d be the biggest challenge.</description>
+    </item>
     
     <item>
       <title>Complicated data-driven applications</title>
@@ -26,8 +35,8 @@
       <pubDate>Sat, 06 Apr 2019 23:44:14 +0200</pubDate>
       
       <guid>https://www.changes.md/post/simple-data-clojure/</guid>
-      <description>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
-Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</description>
+      <description>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&#39;s an example on how things can work out in clojure.
+Let&#39;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&#39;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</description>
     </item>
     
     <item>
@@ -36,8 +45,8 @@ Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the m
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</guid>
-      <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
-I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
+      <description>OpenAPI specification drills it&#39;s ways into becoming a standard in many software companies. Let&#39;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
+I had this approach in mind since I&#39;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
     </item>
     
   </channel>

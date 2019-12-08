@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Mastering the Tooling around Clojure Data Analysis :: CHANGES.md</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Mastering the Tooling around Clojure Data Analysis My December present to myself was a series of books. One of them was called &amp;ldquo;Mastering Clojure Data Analysis&amp;rdquo; by Eric Rochester. It contains a comprehensive set of examples on analysing and visualising data using Clojure. I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with daily work, so I thought &amp;ldquo;why now?&amp;quot;. Once I got the book, I realised what&#39;d be the biggest challenge."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://www.changes.md/post/2019-12-08-mastering-data/" />
+
+
+<link rel="stylesheet" href="https://www.changes.md/assets/style.css">
+
+  <link rel="stylesheet" href="https://www.changes.md/assets/green.css">
+
+
+
+<link rel="stylesheet" href="https://www.changes.md/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.changes.md/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://www.changes.md/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Mastering the Tooling around Clojure Data Analysis :: CHANGES.md — " />
+<meta name="twitter:description" content="Mastering the Tooling around Clojure Data Analysis My December present to myself was a series of books. One of them was called &amp;ldquo;Mastering Clojure Data Analysis&amp;rdquo; by Eric Rochester. It contains a comprehensive set of examples on analysing and visualising data using Clojure. I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with daily work, so I thought &amp;ldquo;why now?&amp;quot;. Once I got the book, I realised what&#39;d be the biggest challenge." />
+<meta name="twitter:site" content="https://www.changes.md" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Mastering the Tooling around Clojure Data Analysis :: CHANGES.md — ">
+<meta property="og:description" content="Mastering the Tooling around Clojure Data Analysis My December present to myself was a series of books. One of them was called &amp;ldquo;Mastering Clojure Data Analysis&amp;rdquo; by Eric Rochester. It contains a comprehensive set of examples on analysing and visualising data using Clojure. I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with daily work, so I thought &amp;ldquo;why now?&amp;quot;. Once I got the book, I realised what&#39;d be the biggest challenge." />
+<meta property="og:url" content="https://www.changes.md/post/2019-12-08-mastering-data/" />
+<meta property="og:site_name" content="Mastering the Tooling around Clojure Data Analysis" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-12-08 23:13:46 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    CHANGES.md
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dixel">Github</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/dixelt">Twitter</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="https://github.com/dixel">Github</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/dixelt">Twitter</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="https://www.changes.md/post/2019-12-08-mastering-data/">Mastering the Tooling around Clojure Data Analysis</a></h1>
+    <div class="post-meta">
+      <span class="post-date">
+        2019-12-08
+      </span>
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      <h1 id="mastering-the-tooling-around-clojure-data-analysis">Mastering the Tooling around Clojure Data Analysis</h1>
+<p>My December present to myself was a series of books. One of them was called &ldquo;<a href="https://www.oreilly.com/library/view/mastering-clojure-data/9781783284139/">Mastering Clojure Data Analysis</a>&rdquo; by Eric Rochester.
+It contains a comprehensive set of examples on analysing and visualising data using Clojure.
+I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with
+daily work, so I thought &ldquo;why now?&quot;.
+Once I got the book, I realised what'd be the biggest challenge. It's first written in 2014, and Clojure tooling made an enormous leap
+in this 5 years.
+But we don't consider it as an obstacle, we consider it as a challenge. I really wanted to get my hands dirty with some of the examples in there,
+but I also resisted to use outdated libraries and tools. Also long time ago wanted to start using <code>deps.edn</code> and it was also a good opportunity to
+start it.
+So, long story short, the process began. I got to read through and roughly get 60% of the idea of the first Chapter (facebook graph analysis).
+But for sure, real problem solving goes second, but setting up the tooling goes first!</p>
+<p>Goodbye <code>project.clj</code>!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">defproject </span>network-six <span style="color:#e6db74">&#34;0.1.0-SNAPSHOT&#34;</span>
+  <span style="color:#e6db74">:description</span> <span style="color:#e6db74">&#34;FIXME: write description&#34;</span>
+  <span style="color:#e6db74">:url</span> <span style="color:#e6db74">&#34;http://example.com/FIXME&#34;</span>
+  <span style="color:#e6db74">:license</span> {<span style="color:#e6db74">:name</span> <span style="color:#e6db74">&#34;Eclipse Public License&#34;</span>
+            <span style="color:#e6db74">:url</span> <span style="color:#e6db74">&#34;http://www.eclipse.org/legal/epl-v10.html&#34;</span>}
+  <span style="color:#e6db74">:plugins</span> [[lein-cljsbuild <span style="color:#e6db74">&#34;0.3.2&#34;</span>]]
+  <span style="color:#e6db74">:dependencies</span> [[org.slf4j/slf4j-simple <span style="color:#e6db74">&#34;1.7.5&#34;</span>]
+                 [org.clojure/clojure <span style="color:#e6db74">&#34;1.5.1&#34;</span>]
+                 [org.clojure/data.json <span style="color:#e6db74">&#34;0.2.2&#34;</span>]
+                 [me.raynes/fs <span style="color:#e6db74">&#34;1.4.4&#34;</span>]
+                 [org.clojure/clojurescript <span style="color:#e6db74">&#34;0.0-2202&#34;</span>]]
+  <span style="color:#e6db74">:cljsbuild</span> {<span style="color:#e6db74">:builds</span> [{<span style="color:#e6db74">:source-paths</span> [<span style="color:#e6db74">&#34;src-cljs&#34;</span>],
+                        <span style="color:#e6db74">:compiler</span> {<span style="color:#e6db74">:pretty-printer</span> true,
+                                   <span style="color:#e6db74">:output-to</span> <span style="color:#e6db74">&#34;www/js/main.js&#34;</span>,
+                                   <span style="color:#e6db74">:optimizations</span> <span style="color:#e6db74">:whitespace</span>}}]})
+</code></pre></div><p>Hello <code>deps.edn</code>!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">
+{<span style="color:#e6db74">:paths</span> [<span style="color:#e6db74">&#34;src/clj&#34;</span>]
+ <span style="color:#e6db74">:deps</span> {org.clojure/clojure {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;1.10.1&#34;</span>}
+        org.clojure/clojurescript {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;1.10.597&#34;</span>}
+        org.slf4j/slf4j-simple {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;1.7.5&#34;</span>}
+        org.clojure/data.json {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.2.7&#34;</span>}
+        me.raynes/fs {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;1.4.6&#34;</span>}
+        cljsjs/d3 {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;5.12.0-0&#34;</span>}}
+ <span style="color:#e6db74">:aliases</span> {<span style="color:#e6db74">:dev</span> {<span style="color:#e6db74">:extra-deps</span> {com.bhauman/figwheel-main {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.2.3&#34;</span>}
+                              com.bhauman/rebel-readline-cljs {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.1.4&#34;</span>}}
+                 <span style="color:#e6db74">:extra-paths</span> [<span style="color:#e6db74">&#34;src/cljs&#34;</span> <span style="color:#e6db74">&#34;target&#34;</span> <span style="color:#e6db74">&#34;resources&#34;</span>]}}}
+</code></pre></div><p>Also figwheel isn't used in the book, but I expect it to be a nice way to provide me with a quick feedback loop.
+Following this scenario, I quickly found that my Emacs couldn't properly <code>cider-jack-in-cljs</code> any more.
+This <a href="http://jr0cket.co.uk/2019/07/CIDER-jack-in-to-Clojure-CLI-projects-from-Spacemacs.html">post</a> came in really handy.
+In a nutshell, this describes how to patch the standard emacs jack-in commands with <code>-Adev</code> flag. I think recently this functionality
+would be available in the clojure layer out of the box.</p>
+<p>Second surprise was on the frontend part. Of course, I wanted to use the most recent stuff, but without prior usage of D3 wasn't quite hard
+to notice that it made a huge step forward. Who else got stuck on the first chapter with the frontend part, could find some SOF answers like
+<a href="https://stackoverflow.com/questions/38391411/what-is-the-d3-js-v4-0-equivalent-for-d3-scale-category10">this</a> very useful.</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="https://www.changes.md/post/stuff/">
+                <span class="button__text">Complicated data-driven applications</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://www.changes.md/assets/main.js"></script>
+<script src="https://www.changes.md/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+ <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(45470124, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/45470124" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
+
+</body>
+</html>

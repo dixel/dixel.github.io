@@ -1,6 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.changes.md/</loc>
+    <lastmod>2019-12-08T23:13:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.changes.md/post/2019-12-08-mastering-data/</loc>
+    <lastmod>2019-12-08T23:13:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.changes.md/post/</loc>
+    <lastmod>2019-12-08T23:13:46+01:00</lastmod>
+  </url>
   
   <url>
     <loc>https://www.changes.md/post/stuff/</loc>
@@ -23,44 +38,27 @@
   </url>
   
   <url>
-    <loc>https://www.changes.md/</loc>
-    <lastmod>2019-05-01T12:09:08+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.changes.md/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.changes.md/tags/clojure/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.changes.md/tags/openapi/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.changes.md/post/</loc>
-    <lastmod>2019-05-01T12:09:08+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.changes.md/tags/swagger/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.changes.md/tags/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.changes.md/categories/</loc>
   </url>
   
 </urlset>
