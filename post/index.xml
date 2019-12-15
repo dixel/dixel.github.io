@@ -6,10 +6,19 @@
     <description>Recent content in Posts on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Dec 2019 23:13:46 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 13:56:14 +0100</lastBuildDate>
     
 	<atom:link href="https://www.changes.md/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Querying the databases from REPL</title>
+      <link>https://www.changes.md/post/2019-12-14-jdbc-next/</link>
+      <pubDate>Sat, 14 Dec 2019 13:56:14 +0100</pubDate>
+      
+      <guid>https://www.changes.md/post/2019-12-14-jdbc-next/</guid>
+      <description>For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy.</description>
+    </item>
     
     <item>
       <title>Mastering the Tooling around Clojure Data Analysis</title>

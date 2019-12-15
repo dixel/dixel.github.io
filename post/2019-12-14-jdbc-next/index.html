@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Querying the databases from REPL :: CHANGES.md</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://www.changes.md/post/2019-12-14-jdbc-next/" />
+
+
+<link rel="stylesheet" href="https://www.changes.md/assets/style.css">
+
+  <link rel="stylesheet" href="https://www.changes.md/assets/green.css">
+
+
+
+<link rel="stylesheet" href="https://www.changes.md/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.changes.md/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://www.changes.md/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Querying the databases from REPL :: CHANGES.md — " />
+<meta name="twitter:description" content="For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy." />
+<meta name="twitter:site" content="https://www.changes.md" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Querying the databases from REPL :: CHANGES.md — ">
+<meta property="og:description" content="For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy." />
+<meta property="og:url" content="https://www.changes.md/post/2019-12-14-jdbc-next/" />
+<meta property="og:site_name" content="Querying the databases from REPL" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-12-14 13:56:14 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    CHANGES.md
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dixel">Github</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/dixelt">Twitter</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="https://github.com/dixel">Github</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/dixelt">Twitter</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="https://www.changes.md/post/2019-12-14-jdbc-next/">Querying the databases from REPL</a></h1>
+    <div class="post-meta">
+      <span class="post-date">
+        2019-12-14
+      </span>
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      <p>For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases.
+At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having
+a single consistent SQL read-only API to them is crucial for productivity.
+Additional benefit compared to the graphical tools available in the market is the ability of programmatic
+post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy.</p>
+<p>Recently was asking myself a question, if there'd be a way to share this experience with other people, not
+necessarily familiar with Clojure. I bundled together <a href="https://github.com/clojure/java.jdbc">clojure.jdbc</a> and
+<a href="https://github.com/bhauman/rebel-readline">rebel.readline</a>, spiced it with a couple of nice macro commands into a single executable jar.
+I added the default configuration with most commonly used storages people use to inspect the databases on the staging environment
+and sent it over for the feedback among my colleagues.
+From 6 people to whom I presented this tool one found it pretty useful, and it wasn't me. I consider that as a huge success.
+I also use it myself for running some large <code>csv</code> exports (thanks to <a href="http://clojure-doc.org/articles/ecosystem/java_jdbc/using_sql.html">reducible-query</a>)
+, adhoc queries and data exploration.</p>
+<p>A week ago there was Clojure meetup in Hamburg, where we were doing some <a href="https://adventofcode.com/">adventofcode</a> tasks together, was super
+nice to be there.
+A friend of mine in Saint-Petersburg wrote me last week that he is really into Clojure and engaged heavily with the community.
+<a href="https://twitter.com/plexus">Arne Brasseur</a> started a series of the blog-posts called <a href="https://lambdaisland.com/blog/2019-11-25-advent-of-parens">&ldquo;Advent Of Parens&rdquo;</a>.
+Too many things that could turn you on in terms of some Clojure hacking.</p>
+<p>So, quickly with the goals: I had an idea (ultimate query tool for multiple database solutions using Clojure REPL) and some sort of a prototype
+that worked so far quite good. I want to build a similar project, but make it more appropriate for the general audience and extendable for
+other database solutions. I also want to try out few things that are sound these days:</p>
+<ul>
+<li><code>deps.edn</code></li>
+<li><code>jdbc.next</code> instead of <code>clojure/java.jdbc</code></li>
+</ul>
+<p><code>deps.edn</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:deps</span> {org.clojure/clojure {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;1.9.0&#34;</span>}
+        com.taoensso/timbre {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;4.10.0&#34;</span>}
+        com.fzakaria/slf4j-timbre {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.3.14&#34;</span>}
+        seancorfield/next.jdbc {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;1.0.12&#34;</span>}
+        com.h2database/h2 {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;1.4.199&#34;</span>}
+        cheshire {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;5.8.0&#34;</span>}
+        clj-time {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.14.4&#34;</span>}
+        cyrus/config {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.3.1&#34;</span>}
+        com.bhauman/rebel-readline {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.1.4&#34;</span>}
+        org.clojure/data.csv {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.1.4&#34;</span>}}}
+</code></pre></div><p>Working with the project in <code>emacs</code> is relatively straightforward, all the environment started to work for me pretty smooth and
+I was already able to see the codebase working:</p>
+<p><a href="https://asciinema.org/a/RSvkHm22gDgayOqDenbLkkh05?speed=2"><img src="https://asciinema.org/a/RSvkHm22gDgayOqDenbLkkh05.svg" alt="asciicast"></a></p>
+<p>Now it's the time to package the whole and make it run as a standalone jar. That was a bit tricky, because I wasn't familiar at
+all with the new uberjar ecosystem. Tried several approaches:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:uberjar</span> {<span style="color:#e6db74">:extra-deps</span> {uberdeps {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.1.6&#34;</span>}}
+           <span style="color:#e6db74">:main-opts</span> [<span style="color:#e6db74">&#34;-m&#34;</span> <span style="color:#e6db74">&#34;uberdeps.uberjar&#34;</span>]}
+ <span style="color:#e6db74">:depstar</span> {<span style="color:#e6db74">:extra-deps</span> {seancorfield/depstar {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.3.4&#34;</span>}}}
+ <span style="color:#e6db74">:cambada</span> {<span style="color:#e6db74">:extra-deps</span> {luchiniatwork/cambada {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;1.0.2&#34;</span>}}}}
+</code></pre></div><p>Out of them only <a href="https://github.com/seancorfield/depstar">depstar</a> fork by Sean Corfield worked out of the box - and, of course,
+this is the main reason for choosing the tool unfortunately and very positive experience I had so far working with
+<a href="https://github.com/seancorfield/next-jdbc">next-jdbc</a></p>
+<p>Nice that you've finished reading this one. Here's the link to repository itself <a href="https://github.com/dixel/loki">link</a></p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="https://www.changes.md/post/2019-12-08-mastering-data/">
+                <span class="button__text">Mastering the Tooling around Clojure Data Analysis</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://www.changes.md/assets/main.js"></script>
+<script src="https://www.changes.md/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+ <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(45470124, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/45470124" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
+
+</body>
+</html>
