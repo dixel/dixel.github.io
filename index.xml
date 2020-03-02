@@ -6,10 +6,22 @@
     <description>Recent content on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Dec 2019 13:56:14 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2020 21:10:17 +0100</lastBuildDate>
     
 	<atom:link href="https://www.changes.md/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ClojureD 2020</title>
+      <link>https://www.changes.md/post/2020-02-02-clojured/</link>
+      <pubDate>Mon, 02 Mar 2020 21:10:17 +0100</pubDate>
+      
+      <guid>https://www.changes.md/post/2020-02-02-clojured/</guid>
+      <description>Last saturday I visited my second ClojureD conference in Berlin. It&#39;s an amazing experience meeting people who indirectly influenced my choice of programming language for the past several years (kudos to Alexander and Nikita).
+It&#39;s also very pleasant to see how many new things popped up recently in Clojure community.
+Here are few highlights I wanted to share:
+Babashka by @borkdude (github) Really appreciate how much effort Michael puts into the modern tooling for Clojure!</description>
+    </item>
     
     <item>
       <title>Querying the databases from REPL</title>

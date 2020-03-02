@@ -13,13 +13,15 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
 <link rel="canonical" href="https://www.changes.md/post/2019-03-30-3-clojure-swagger/" />
 
 
+
+
 <link rel="stylesheet" href="https://www.changes.md/assets/style.css">
 
   <link rel="stylesheet" href="https://www.changes.md/assets/green.css">
 
 
 
-<link rel="stylesheet" href="https://www.changes.md/style.css">
+
 
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.changes.md/img/apple-touch-icon-144-precomposed.png">
@@ -64,7 +66,7 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
 <body class="">
 
 
-<div class="container">
+<div class="container headings--one-size">
 
   <header class="header">
   <div class="header__inner">
@@ -97,6 +99,8 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
       
       
     
+
+    
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -113,6 +117,7 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
         <li><a href="https://twitter.com/dixelt">Twitter</a></li>
       
     
+    
   </ul>
 </nav>
 
@@ -122,33 +127,40 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
 
   <div class="content">
     
-  <div class="post">
-    <h1 class="post-title"><a href="https://www.changes.md/post/2019-03-30-3-clojure-swagger/">3 libraries to work with swagger in Clojure</a></h1>
-    <div class="post-meta">
-      <span class="post-date">
-        2019-02-28
-      </span>
-      <span class="post-author">:: @dixel</span>
-    </div>
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://www.changes.md/post/2019-03-30-3-clojure-swagger/">3 libraries to work with swagger in Clojure</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-02-28
+    </span>
+    
+    
+    <span class="post-author">::
+      @dixel
+    </span>
+    
+  </div>
 
+  
+  <span class="post-tags">
     
-      <span class="post-tags">
-        
-          #<a href="https://www.changes.md/tags/clojure/">clojure</a>&nbsp;
-        
-          #<a href="https://www.changes.md/tags/openapi/">openapi</a>&nbsp;
-        
-          #<a href="https://www.changes.md/tags/swagger/">swagger</a>&nbsp;
-        
-      </span>
+    #<a href="https://www.changes.md/tags/clojure/">clojure</a>&nbsp;
     
+    #<a href="https://www.changes.md/tags/openapi/">openapi</a>&nbsp;
+    
+    #<a href="https://www.changes.md/tags/swagger/">swagger</a>&nbsp;
+    
+  </span>
+  
 
-    
-      <img src="https://raw.githubusercontent.com/dixel/puml-logo/master/pics/100x100/clojure.png" class="post-cover" />
-    
+  
+  <img src="https://raw.githubusercontent.com/dixel/puml-logo/master/pics/100x100/clojure.png" class="post-cover" />
+  
 
-    <div class="post-content">
-      <p>OpenAPI specification drills it's ways into becoming a standard in many software companies.
+  <div class="post-content"><div>
+        <p>OpenAPI specification drills it's ways into becoming a standard in many software companies.
 Let's say your organization wants to follow the API-first approach.
 It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract,
 and review it.</p>
@@ -160,22 +172,22 @@ significantly reduces the communication overhead.
 Having statically defined models and abstractions used this days in the programming systems make it sometimes
 very hard to make new changes in the data models shaping the API.</p>
 <p>In this post I'd like to cover a couple of tools that may help you in designing a Clojure application with API-first approach.</p>
-<h3 id="0-compojure-api">0. Compojure-API</h3>
+<h3 id="0-compojure-api">0. Compojure-API<a href="#0-compojure-api" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><a href="https://github.com/metosin/compojure-api">github</a></p>
 <p>My first library written in Clojure that enables easy setup for swagger.
 At that point after learning some Clojure syntax, concepts of <a href="https://github.com/ring-clojure/ring">ring</a>
 HTTP server abstractions and developing a couple of applications with <a href="https://github.com/weavejester/compojure">compojure router</a>,
 having compojure-api felt like a natural choice for embedding swagger into your code.</p>
-<h4 id="usage">Usage</h4>
+<h4 id="usage">Usage<a href="#usage" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lein new compojure-api +clojure-test newproject
-</code></pre></div><h4 id="advantages">++advantages++</h4>
+</code></pre></div><h4 id="advantages">++advantages++<a href="#advantages" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>Fits pretty well into existing ring-based ecosystem.</li>
 <li>These days supports both clojure.spec and <a href="https://github.com/plumatic/schema">prismatic schema</a> for schema validation.</li>
 <li>Easy to start with, no need to leave Clojure editor.</li>
 <li>Async requests support (<a href="https://github.com/clojure/core.async">core.async</a>, <a href="https://github.com/ztellman/manifold">manifold</a>)</li>
 </ul>
-<h4 id="--disadvantages--">&ndash;disadvantages&ndash;</h4>
+<h4 id="--disadvantages--">&ndash;disadvantages&ndash;<a href="#--disadvantages--" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>A DSL is used for generating the API specification.
 It can diverge from the features implemented by OpenAPI
@@ -185,18 +197,18 @@ sometimes the expectations don't match the <a href="https://github.com/metosin/c
 requirements for schema validation and also agree on response messages, there are probably only two options - validate on your own
 or contribute to the project.</li>
 </ul>
-<h3 id="1-swagger1st">1. Swagger1st</h3>
+<h3 id="1-swagger1st">1. Swagger1st<a href="#1-swagger1st" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><a href="https://github.com/zalando-stups/swagger1st">github</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lein new swagger1st newproject
 </code></pre></div><p>Used this library when working in zalando, I am still quite happy with it. As it comes from the title, swagger1st encourages you to first write
 swagger <a href="https://swagger.io/specification/">definition</a>, use operationId as the link to the handler function. Having a swagger definition
 at hand this library was the first choice for me when prototyping RESTful applications.</p>
-<h4 id="advantages-1">++advantages++</h4>
+<h4 id="advantages-1">++advantages++<a href="#advantages-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>API-first approach for real. You may take the swagger.yaml file from another team and bootstrap the prototype in no time.</li>
 <li>Very simple and pluggable into any other ring ecosystem.</li>
 </ul>
-<h4 id="--disadvantages---1">&ndash;disadvantages&ndash;</h4>
+<h4 id="--disadvantages---1">&ndash;disadvantages&ndash;<a href="#--disadvantages---1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>No automatic schema validation. This sometimes becomes a burden, since writing custom validators requires interaction with path definitions and parameters.
 Since the latter are defined only in the spec, validating the parameters/response requires writing/defining additional logic in handlers that can
@@ -204,57 +216,58 @@ diverge from the schema specification at some point.</li>
 <li>A bit tricky logic when other libraries also enable some routing (<a href="https://github.com/soundcloud/prometheus-clj">prometheus</a>)</li>
 <li>Not actively maintained (which keeps it simple though).</li>
 </ul>
-<h3 id="2-reitit">2. Reitit</h3>
+<h3 id="2-reitit">2. Reitit<a href="#2-reitit" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><a href="https://github.com/metosin/reitit">github</a></p>
 <p>Tried it a couple of times, but still finding my perfect use case for it.
 It is now part of quite popular <a href="https://github.com/luminus-framework/luminus-template">luminus template</a>.
 I really want to give it a try, at the first glance, this is my pros/cons list for it:</p>
-<h4 id="usage-1">Usage</h4>
+<h4 id="usage-1">Usage<a href="#usage-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p><a href="https://github.com/metosin/reitit/blob/master/examples/ring-swagger/src/example/server.clj">sample code</a></p>
-<h4 id="advantages-2">++advantages++</h4>
+<h4 id="advantages-2">++advantages++<a href="#advantages-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>Schema coercion. The extreme care and effort that was put in the development of the schema/spec coercion support is huge.</li>
 <li>Fully data driven. Your API is fully represented as a data structure.</li>
 <li>Pluggable extensions.</li>
 <li>Maintained by Metosin.</li>
 </ul>
-<h4 id="--disadvantages---2">&ndash;disadvantages&ndash;</h4>
+<h4 id="--disadvantages---2">&ndash;disadvantages&ndash;<a href="#--disadvantages---2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>Becomes quite heavy and requires a number of opinionated libraries.
 This is a bit too of a personal opinion, but what I absolutely enjoyed in the Clojure community from the very beginning was
 the ability to play with the components as with lego bricks - swapping them/changing the order of the handlers and so on.</li>
 <li>Currently similar to compojure: couldn't find a way to customize error messages in case of coercion failures.</li>
 </ul>
-<h3 id="conclusion">Conclusion</h3>
+<h3 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>Swagger ecosystem is very powerful, and I am always seeking the possibilities to leverage it's power. Having swagger definition file,
 documentation, client libraries, server code and many other useful things may be simply generated with <a href="https://github.com/swagger-api/swagger-codegen">swagger-codegen</a>.
 When writing the code, it's crucial to keep this definition consistent with the currently running code.
 Hope this overview of 3 solutions that help achieving API-first approach with Clojure would help you in choosing the right tool.</p>
 
+      </div></div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
     </div>
-    
-      <div class="pagination">
-        <div class="pagination__title">
-          <span class="pagination__title-h">Read other posts</span>
-          <hr />
-        </div>
-        <div class="pagination__buttons">
-          
-            <span class="button previous">
-              <a href="https://www.changes.md/post/simple-data-clojure/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Simple data-driven applications in Clojure</span>
-              </a>
-            </span>
-          
-          
-        </div>
-      </div>
-    
-
-    
-
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="https://www.changes.md/post/simple-data-clojure/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Simple data-driven applications in Clojure</span>
+        </a>
+      </span>
+      
+      
+    </div>
   </div>
+  
+
+  
+
+</div>
 
   </div>
 
@@ -263,10 +276,10 @@ Hope this overview of 3 solutions that help achieving API-first approach with Cl
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>
-    
   </div>
 </footer>
 
