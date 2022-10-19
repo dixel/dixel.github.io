@@ -6,8 +6,8 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="OpenAPI specification drills it&#39;s ways into becoming a standard in many software companies. Let&#39;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
-I had this approach in mind since I&#39;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job."/>
+<meta name="description" content="OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
+I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://www.changes.md/post/2019-03-30-3-clojure-swagger/" />
@@ -32,8 +32,8 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="3 libraries to work with swagger in Clojure :: CHANGES.md — " />
-<meta name="twitter:description" content="OpenAPI specification drills it&#39;s ways into becoming a standard in many software companies. Let&#39;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
-I had this approach in mind since I&#39;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job." />
+<meta name="twitter:description" content="OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
+I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job." />
 <meta name="twitter:site" content="https://www.changes.md" />
 <meta name="twitter:creator" content="@dixel" />
 <meta name="twitter:image" content="https://raw.githubusercontent.com/dixel/puml-logo/master/pics/100x100/clojure.png">
@@ -42,8 +42,8 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="3 libraries to work with swagger in Clojure :: CHANGES.md — ">
-<meta property="og:description" content="OpenAPI specification drills it&#39;s ways into becoming a standard in many software companies. Let&#39;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
-I had this approach in mind since I&#39;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job." />
+<meta property="og:description" content="OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
+I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job." />
 <meta property="og:url" content="https://www.changes.md/post/2019-03-30-3-clojure-swagger/" />
 <meta property="og:site_name" content="3 libraries to work with swagger in Clojure" />
 <meta property="og:image" content="https://raw.githubusercontent.com/dixel/puml-logo/master/pics/100x100/clojure.png">
@@ -90,7 +90,15 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
         
       
         
+          <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
+        
+      
+        
           <li><a href="https://github.com/dixel">Github</a></li>
+        
+      
+        
+          <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
         
       
         
@@ -110,7 +118,15 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
       
     
       
+        <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
+      
+    
+      
         <li><a href="https://github.com/dixel">Github</a></li>
+      
+    
+      
+        <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
       
     
       
@@ -160,18 +176,18 @@ I had this approach in mind since I&#39;ve started working in a small payment pr
   
 
   <div class="post-content"><div>
-        <p>OpenAPI specification drills it's ways into becoming a standard in many software companies.
-Let's say your organization wants to follow the API-first approach.
+        <p>OpenAPI specification drills it&rsquo;s ways into becoming a standard in many software companies.
+Let&rsquo;s say your organization wants to follow the API-first approach.
 It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract,
 and review it.</p>
-<p>I had this approach in mind since I've started working in a small payment provider company.
+<p>I had this approach in mind since I&rsquo;ve started working in a small payment provider company.
 Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.
 When I joined Zalando in 2017 I was very happy to see this approach being adopted company-wise.</p>
 <p>So far my gut-feeling is that defining and negotiating the API before jumping to the implementation
 significantly reduces the communication overhead.
 Having statically defined models and abstractions used this days in the programming systems make it sometimes
 very hard to make new changes in the data models shaping the API.</p>
-<p>In this post I'd like to cover a couple of tools that may help you in designing a Clojure application with API-first approach.</p>
+<p>In this post I&rsquo;d like to cover a couple of tools that may help you in designing a Clojure application with API-first approach.</p>
 <h3 id="0-compojure-api">0. Compojure-API<a href="#0-compojure-api" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><a href="https://github.com/metosin/compojure-api">github</a></p>
 <p>My first library written in Clojure that enables easy setup for swagger.
@@ -179,8 +195,8 @@ At that point after learning some Clojure syntax, concepts of <a href="https://g
 HTTP server abstractions and developing a couple of applications with <a href="https://github.com/weavejester/compojure">compojure router</a>,
 having compojure-api felt like a natural choice for embedding swagger into your code.</p>
 <h4 id="usage">Usage<a href="#usage" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lein new compojure-api +clojure-test newproject
-</code></pre></div><h4 id="advantages">++advantages++<a href="#advantages" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lein new compojure-api +clojure-test newproject
+</span></span></code></pre></div><h4 id="advantages">++advantages++<a href="#advantages" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>Fits pretty well into existing ring-based ecosystem.</li>
 <li>These days supports both clojure.spec and <a href="https://github.com/plumatic/schema">prismatic schema</a> for schema validation.</li>
@@ -191,16 +207,16 @@ having compojure-api felt like a natural choice for embedding swagger into your 
 <ul>
 <li>A DSL is used for generating the API specification.
 It can diverge from the features implemented by OpenAPI
-and it's not very convenient to share in a polyglot environment/with the other teams.</li>
+and it&rsquo;s not very convenient to share in a polyglot environment/with the other teams.</li>
 <li>Even though schema validation seems to be like a must-have feature,
-sometimes the expectations don't match the <a href="https://github.com/metosin/compojure-api/issues">reality</a>. If you have some very specific
+sometimes the expectations don&rsquo;t match the <a href="https://github.com/metosin/compojure-api/issues">reality</a>. If you have some very specific
 requirements for schema validation and also agree on response messages, there are probably only two options - validate on your own
 or contribute to the project.</li>
 </ul>
 <h3 id="1-swagger1st">1. Swagger1st<a href="#1-swagger1st" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><a href="https://github.com/zalando-stups/swagger1st">github</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lein new swagger1st newproject
-</code></pre></div><p>Used this library when working in zalando, I am still quite happy with it. As it comes from the title, swagger1st encourages you to first write
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lein new swagger1st newproject
+</span></span></code></pre></div><p>Used this library when working in zalando, I am still quite happy with it. As it comes from the title, swagger1st encourages you to first write
 swagger <a href="https://swagger.io/specification/">definition</a>, use operationId as the link to the handler function. Having a swagger definition
 at hand this library was the first choice for me when prototyping RESTful applications.</p>
 <h4 id="advantages-1">++advantages++<a href="#advantages-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
@@ -235,12 +251,12 @@ I really want to give it a try, at the first glance, this is my pros/cons list f
 <li>Becomes quite heavy and requires a number of opinionated libraries.
 This is a bit too of a personal opinion, but what I absolutely enjoyed in the Clojure community from the very beginning was
 the ability to play with the components as with lego bricks - swapping them/changing the order of the handlers and so on.</li>
-<li>Currently similar to compojure: couldn't find a way to customize error messages in case of coercion failures.</li>
+<li>Currently similar to compojure: couldn&rsquo;t find a way to customize error messages in case of coercion failures.</li>
 </ul>
 <h3 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>Swagger ecosystem is very powerful, and I am always seeking the possibilities to leverage it's power. Having swagger definition file,
+<p>Swagger ecosystem is very powerful, and I am always seeking the possibilities to leverage it&rsquo;s power. Having swagger definition file,
 documentation, client libraries, server code and many other useful things may be simply generated with <a href="https://github.com/swagger-api/swagger-codegen">swagger-codegen</a>.
-When writing the code, it's crucial to keep this definition consistent with the currently running code.
+When writing the code, it&rsquo;s crucial to keep this definition consistent with the currently running code.
 Hope this overview of 3 solutions that help achieving API-first approach with Clojure would help you in choosing the right tool.</p>
 
       </div></div>
@@ -276,7 +292,7 @@ Hope this overview of 3 solutions that help achieving API-first approach with Cl
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

@@ -6,10 +6,16 @@
     <description>Recent content on CHANGES.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Mar 2020 21:10:17 +0100</lastBuildDate>
-    
-	<atom:link href="https://www.changes.md/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 18 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.changes.md/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flipper Zero for testing old dusty electronic components</title>
+      <link>https://www.changes.md/post/flipper-zero/</link>
+      <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.changes.md/post/flipper-zero/</guid>
+      <description>Dimmable LED On high frequencies (&amp;gt; 50 Hz), blinking of a LED becomes undistinguishable from a bright light. By using pulse width, the &amp;ldquo;brightness&amp;rdquo;, or it&amp;rsquo;s perception can be controlled.
+Servo When I first encountered this device servo, I got really confused, as the way it actually moves towards a certain angle is rather cumbersome. For this specific servo (the one I got with my ARDX) the following settings allowed me to control 180 degrees of angle with a step of 9 degrees:</description>
+    </item>
     
     <item>
       <title>ClojureD 2020</title>
@@ -17,8 +23,8 @@
       <pubDate>Mon, 02 Mar 2020 21:10:17 +0100</pubDate>
       
       <guid>https://www.changes.md/post/2020-02-02-clojured/</guid>
-      <description>Last saturday I visited my second ClojureD conference in Berlin. It&#39;s an amazing experience meeting people who indirectly influenced my choice of programming language for the past several years (kudos to Alexander and Nikita).
-It&#39;s also very pleasant to see how many new things popped up recently in Clojure community.
+      <description>Last saturday I visited my second ClojureD conference in Berlin. It&amp;rsquo;s an amazing experience meeting people who indirectly influenced my choice of programming language for the past several years (kudos to Alexander and Nikita).
+It&amp;rsquo;s also very pleasant to see how many new things popped up recently in Clojure community.
 Here are few highlights I wanted to share:
 Babashka by @borkdude (github) Really appreciate how much effort Michael puts into the modern tooling for Clojure!</description>
     </item>
@@ -38,7 +44,7 @@ Babashka by @borkdude (github) Really appreciate how much effort Michael puts in
       <pubDate>Sun, 08 Dec 2019 23:13:46 +0100</pubDate>
       
       <guid>https://www.changes.md/post/2019-12-08-mastering-data/</guid>
-      <description>My December present to myself was a series of books. One of them was called &amp;ldquo;Mastering Clojure Data Analysis&amp;rdquo; by Eric Rochester. It contains a comprehensive set of examples on analysing and visualising data using Clojure. I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with daily work, so I thought &amp;ldquo;why not?&amp;quot;. Once I got the book, I realised what&#39;d be the biggest challenge.</description>
+      <description>My December present to myself was a series of books. One of them was called &amp;ldquo;Mastering Clojure Data Analysis&amp;rdquo; by Eric Rochester. It contains a comprehensive set of examples on analysing and visualising data using Clojure. I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with daily work, so I thought &amp;ldquo;why not?&amp;rdquo;. Once I got the book, I realised what&amp;rsquo;d be the biggest challenge.</description>
     </item>
     
     <item>
@@ -56,8 +62,8 @@ Babashka by @borkdude (github) Really appreciate how much effort Michael puts in
       <pubDate>Sat, 06 Apr 2019 23:44:14 +0200</pubDate>
       
       <guid>https://www.changes.md/post/simple-data-clojure/</guid>
-      <description>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&#39;s an example on how things can work out in clojure.
-Let&#39;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&#39;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</description>
+      <description>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
+Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</description>
     </item>
     
     <item>
@@ -75,8 +81,8 @@ Let&#39;s say we have an SQL-based engine like Presto (or Presto) as the main in
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</guid>
-      <description>OpenAPI specification drills it&#39;s ways into becoming a standard in many software companies. Let&#39;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
-I had this approach in mind since I&#39;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
+      <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
+I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
     </item>
     
   </channel>
