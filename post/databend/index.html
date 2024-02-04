@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Databend on AWS/EKS :: CHANGES.md</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Over the Christmas silent period, I got my hands on Databend, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://www.changes.md/post/databend/" />
+
+
+
+
+<link rel="stylesheet" href="https://www.changes.md/assets/style.css">
+
+  <link rel="stylesheet" href="https://www.changes.md/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.changes.md/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://www.changes.md/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Databend on AWS/EKS :: CHANGES.md — " />
+<meta name="twitter:description" content="Over the Christmas silent period, I got my hands on Databend, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage." />
+<meta name="twitter:site" content="https://www.changes.md" />
+<meta name="twitter:creator" content="@dixel" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Databend on AWS/EKS :: CHANGES.md — ">
+<meta property="og:description" content="Over the Christmas silent period, I got my hands on Databend, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage." />
+<meta property="og:url" content="https://www.changes.md/post/databend/" />
+<meta property="og:site_name" content="Databend on AWS/EKS" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2024-02-04 20:51:50 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    CHANGES.md
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dixel">Github</a></li>
+        
+      
+        
+          <li><a href="https://mastodon.social/@dixel">Mastodon</a></li>
+        
+      
+        
+          <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
+
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="https://twitter.com/dixelt">Twitter</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
+      
+    
+      
+        <li><a href="https://github.com/dixel">Github</a></li>
+      
+    
+      
+        <li><a href="https://mastodon.social/@dixel">Mastodon</a></li>
+      
+    
+      
+        <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
+      
+    
+      
+        <li><a href="https://twitter.com/dixelt">Twitter</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://www.changes.md/post/databend/">Databend on AWS/EKS</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2024-02-04
+    </span>
+    
+    
+    <span class="post-author">::
+      @dixel
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://www.changes.md/tags/databend/">databend</a>&nbsp;
+    
+    #<a href="https://www.changes.md/tags/data-engineering/">data-engineering</a>&nbsp;
+    
+    #<a href="https://www.changes.md/tags/cloud/">cloud</a>&nbsp;
+    
+    #<a href="https://www.changes.md/tags/data/">data</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content"><div>
+        <p><img src="/static/databend.png" alt="resource"></p>
+<p>Over the Christmas silent period, I got my hands on <a href="https://github.com/datafuselabs/databend">Databend</a>, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage. Benchmarks comparing its performance with alternative open-source solutions <a href="https://benchmark.clickhouse.com/">ClickBench</a> and <a href="https://medium.com/@databend/tpc-h-benchmark-databend-cloud-vs-snowflake-aa97971c32a0">with cloud alternatives</a> show some interesting results.</p>
+<p>I briefly went through the documentation to figure out how to try things out - and, of course, there was a tutorial on how to set it up locally with MinIO or locally with Docker. I didn&rsquo;t even try this because what I would get locally in that case would only be a loosely implemented SQL dialect, whereas I needed the power of distributed computation at my fingertips. So, I went with the K8S setup, even though, having only a handful of microservices in the current organization, we don&rsquo;t use it in production. It took me no time to discover a great way to provision and control a k8s cluster on AWS without the need for Terraform - <a href="https://eksctl.io/#">eksctl</a>. After some dancing with the documentation and setting up the <a href="https://docs.databend.com/guides/deploy/cluster/deploying-databend-on-kubernetes">recommended helm charts and applications</a> (beware, &ldquo;recommended&rdquo; in this guide is almost always mandatory - and even if not, you surely want to monitor your cluster after setting it up).</p>
+<p>I decided to use a few smaller on-demand nodes for databend-meta nodes and a node group with spot instances having more beef in terms of networking/memory/CPU (in that order), with the ability to interchange things in the future. After some tuning, I was able to find a setup that was giving enough performance without breaking the bank and managed to reproduce some production queries we use with AWS Redshift.</p>
+<p>Getting this result on the client was already quite pleasant, where I thought it&rsquo;s about to start working as intended:</p>
+<pre tabindex="0"><code>34 rows read in 73.337 sec. Processed 753.26 million rows, 100.63 GiB (10.27 million rows/s, 1.37 GiB/s)
+</code></pre><p>Though it might seem not much for modern bandwidth, for a medium-complexity analytics query, that demonstrated some potential to me.</p>
+<p>A nice thing for integration - a native JDBC driver was available, together with the ability to connect through a MySQL interface, which easily allowed integrating and trying out a few existing data tools.</p>
+<p>Overall, I am pretty happy with the setup. Key benefits that I noted for myself:</p>
+<ul>
+<li><strong>Performance:</strong> It is so far super-good-enough for our main use-cases.</li>
+<li><strong>Isolation:</strong> The engine is mainly performing/optimizing analytical queries; the data is stored elsewhere.</li>
+<li><strong>Integrity:</strong> The tool provides very good interfacing with the outside world without jeopardizing the consistency of the tool.</li>
+</ul>
+<p>Key things I&rsquo;ll keep in mind before going full speed with the solution:</p>
+<ul>
+<li><strong>Maturity/Stability:</strong> The tool is quite young, and some of the behaviors I observed proved it:
+<ul>
+<li>User-space queries causing cluster shutdown.</li>
+<li>Sometimes misleading error messages, especially depending on the connector/driver used.</li>
+<li>The UDF library is not as extended as for more well-established tools on the market.</li>
+</ul>
+</li>
+</ul>
+<p>All in all, this leads me to think I will keep the tool on the radar and explore possibilities of using it for non-critical use cases, where performance prevails over stability and accuracy. I also started using it more for ad-hoc data analysis (loading a file from S3, performing an analysis, and loading it back). For those tiny purposes, the tool is great, and I think this is the best way to gain more traction. Wishing the team great success with the development.</p>
+
+      </div></div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="https://www.changes.md/post/flipper-zero/">
+          <span class="button__text">Flipper Zero for testing old dusty electronic components</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://www.changes.md/assets/main.js"></script>
+<script src="https://www.changes.md/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
