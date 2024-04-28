@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>flipper on CHANGES.md</title>
+    <title>Flipper on CHANGES.md</title>
     <link>https://www.changes.md/tags/flipper/</link>
-    <description>Recent content in flipper on CHANGES.md</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 18 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.changes.md/tags/flipper/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Flipper on CHANGES.md</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.changes.md/tags/flipper/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flipper Zero for testing old dusty electronic components</title>
       <link>https://www.changes.md/post/flipper-zero/</link>
       <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://www.changes.md/post/flipper-zero/</guid>
-      <description>Dimmable LED On high frequencies (&amp;gt; 50 Hz), blinking of a LED becomes undistinguishable from a bright light. By using pulse width, the &amp;ldquo;brightness&amp;rdquo;, or it&amp;rsquo;s perception can be controlled.
-Servo When I first encountered this device servo, I got really confused, as the way it actually moves towards a certain angle is rather cumbersome. For this specific servo (the one I got with my ARDX) the following settings allowed me to control 180 degrees of angle with a step of 9 degrees:</description>
+      <description>Dimmable LED On high frequencies (&amp;gt; 50 Hz), blinking of a LED becomes undistinguishable from a bright light. By using pulse width, the &amp;ldquo;brightness&amp;rdquo;, or it&amp;rsquo;s perception can be controlled.&#xA;Servo When I first encountered this device servo, I got really confused, as the way it actually moves towards a certain angle is rather cumbersome. For this specific servo (the one I got with my ARDX) the following settings allowed me to control 180 degrees of angle with a step of 9 degrees:</description>
     </item>
-    
   </channel>
 </rss>

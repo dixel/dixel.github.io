@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>data-engineering on CHANGES.md</title>
+    <title>Data-Engineering on CHANGES.md</title>
     <link>https://www.changes.md/tags/data-engineering/</link>
-    <description>Recent content in data-engineering on CHANGES.md</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 04 Feb 2024 20:51:50 +0100</lastBuildDate><atom:link href="https://www.changes.md/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Data-Engineering on CHANGES.md</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 Feb 2024 20:51:50 +0100</lastBuildDate>
+    <atom:link href="https://www.changes.md/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Databend on AWS/EKS</title>
       <link>https://www.changes.md/post/databend/</link>
       <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      
       <guid>https://www.changes.md/post/databend/</guid>
       <description>Over the Christmas silent period, I got my hands on Databend, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage.</description>
     </item>
-    
   </channel>
 </rss>

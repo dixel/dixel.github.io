@@ -4,86 +4,72 @@
     <title>Posts on CHANGES.md</title>
     <link>https://www.changes.md/post/</link>
     <description>Recent content in Posts on CHANGES.md</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 04 Feb 2024 20:51:50 +0100</lastBuildDate><atom:link href="https://www.changes.md/post/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 28 Apr 2024 17:52:14 +0200</lastBuildDate>
+    <atom:link href="https://www.changes.md/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D-printed portal gun replica</title>
+      <link>https://www.changes.md/post/portal/</link>
+      <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
+      <guid>https://www.changes.md/post/portal/</guid>
+      <description>Just finished my first large 3D-printing project. For sure I couldn&amp;rsquo;t pass by when I saw this amazing portal gun replica from @KirbyDowney_65 on Printables. Here I&amp;rsquo;d simply like to share some highlights and happy moments I had while doing it.&#xA;I started by printing claws and assembling them, as they seemed the most fragile and tricky to assemble, but not so time-consuming when printing.&#xA;A few more printing sessions and the remaining black parts are also done:</description>
+    </item>
     <item>
       <title>Databend on AWS/EKS</title>
       <link>https://www.changes.md/post/databend/</link>
       <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      
       <guid>https://www.changes.md/post/databend/</guid>
       <description>Over the Christmas silent period, I got my hands on Databend, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage.</description>
     </item>
-    
     <item>
       <title>Flipper Zero for testing old dusty electronic components</title>
       <link>https://www.changes.md/post/flipper-zero/</link>
       <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://www.changes.md/post/flipper-zero/</guid>
-      <description>Dimmable LED On high frequencies (&amp;gt; 50 Hz), blinking of a LED becomes undistinguishable from a bright light. By using pulse width, the &amp;ldquo;brightness&amp;rdquo;, or it&amp;rsquo;s perception can be controlled.
-Servo When I first encountered this device servo, I got really confused, as the way it actually moves towards a certain angle is rather cumbersome. For this specific servo (the one I got with my ARDX) the following settings allowed me to control 180 degrees of angle with a step of 9 degrees:</description>
+      <description>Dimmable LED On high frequencies (&amp;gt; 50 Hz), blinking of a LED becomes undistinguishable from a bright light. By using pulse width, the &amp;ldquo;brightness&amp;rdquo;, or it&amp;rsquo;s perception can be controlled.&#xA;Servo When I first encountered this device servo, I got really confused, as the way it actually moves towards a certain angle is rather cumbersome. For this specific servo (the one I got with my ARDX) the following settings allowed me to control 180 degrees of angle with a step of 9 degrees:</description>
     </item>
-    
     <item>
       <title>ClojureD 2020</title>
       <link>https://www.changes.md/post/2020-02-02-clojured/</link>
       <pubDate>Mon, 02 Mar 2020 21:10:17 +0100</pubDate>
-      
       <guid>https://www.changes.md/post/2020-02-02-clojured/</guid>
-      <description>Last saturday I visited my second ClojureD conference in Berlin. It&amp;rsquo;s an amazing experience meeting people who indirectly influenced my choice of programming language for the past several years (kudos to Alexander and Nikita).
-It&amp;rsquo;s also very pleasant to see how many new things popped up recently in Clojure community.
-Here are few highlights I wanted to share:
-Babashka by @borkdude (github) Really appreciate how much effort Michael puts into the modern tooling for Clojure!</description>
+      <description>Last saturday I visited my second ClojureD conference in Berlin. It&amp;rsquo;s an amazing experience meeting people who indirectly influenced my choice of programming language for the past several years (kudos to Alexander and Nikita).&#xA;It&amp;rsquo;s also very pleasant to see how many new things popped up recently in Clojure community.&#xA;Here are few highlights I wanted to share:&#xA;Babashka by @borkdude (github) Really appreciate how much effort Michael puts into the modern tooling for Clojure!</description>
     </item>
-    
     <item>
       <title>Querying the databases from REPL</title>
       <link>https://www.changes.md/post/2019-12-14-jdbc-next/</link>
       <pubDate>Sat, 14 Dec 2019 13:56:14 +0100</pubDate>
-      
       <guid>https://www.changes.md/post/2019-12-14-jdbc-next/</guid>
       <description>For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy.</description>
     </item>
-    
     <item>
       <title>Mastering the Tooling around Clojure Data Analysis</title>
       <link>https://www.changes.md/post/2019-12-08-mastering-data/</link>
       <pubDate>Sun, 08 Dec 2019 23:13:46 +0100</pubDate>
-      
       <guid>https://www.changes.md/post/2019-12-08-mastering-data/</guid>
       <description>My December present to myself was a series of books. One of them was called &amp;ldquo;Mastering Clojure Data Analysis&amp;rdquo; by Eric Rochester. It contains a comprehensive set of examples on analysing and visualising data using Clojure. I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with daily work, so I thought &amp;ldquo;why not?&amp;rdquo;. Once I got the book, I realised what&amp;rsquo;d be the biggest challenge.</description>
     </item>
-    
     <item>
       <title>Complicated data-driven applications</title>
       <link>https://www.changes.md/post/stuff/</link>
       <pubDate>Wed, 01 May 2019 12:09:08 +0200</pubDate>
-      
       <guid>https://www.changes.md/post/stuff/</guid>
       <description>Any design is not perfect. There needs to be a way to evolve away from any decision. Components have different lifecycles. Components have different levels of criticality. Those components should have a very clean interface between each other and an outstanding level of isolation. Replaceable &amp;gt; Extendable, because the latter is more opinionated. The lifetime of the components should be challenged at all times. Proven technologies should be maintained in a conservative way.</description>
     </item>
-    
     <item>
       <title>Simple data-driven applications in Clojure</title>
       <link>https://www.changes.md/post/simple-data-clojure/</link>
       <pubDate>Sat, 06 Apr 2019 23:44:14 +0200</pubDate>
-      
       <guid>https://www.changes.md/post/simple-data-clojure/</guid>
-      <description>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
-Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</description>
+      <description>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.&#xA;Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</description>
     </item>
-    
     <item>
       <title>3 libraries to work with swagger in Clojure</title>
       <link>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</guid>
-      <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
-I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
+      <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.&#xA;I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
     </item>
-    
   </channel>
 </rss>

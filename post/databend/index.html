@@ -12,6 +12,9 @@
 <link rel="canonical" href="https://www.changes.md/post/databend/" />
 
 
+  
+
+
 
 
 <link rel="stylesheet" href="https://www.changes.md/assets/style.css">
@@ -32,7 +35,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Databend on AWS/EKS :: CHANGES.md — " />
 <meta name="twitter:description" content="Over the Christmas silent period, I got my hands on Databend, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage." />
-<meta name="twitter:site" content="https://www.changes.md" />
+<meta name="twitter:site" content="https://www.changes.md/" />
 <meta name="twitter:creator" content="@dixel" />
 <meta name="twitter:image" content="">
 
@@ -189,9 +192,9 @@
   
 
   <div class="post-content"><div>
-        <p><img src="/static/databend.png" alt="resource"></p>
+        <p><img alt="resource" src="/static/databend.png"></p>
 <p>Over the Christmas silent period, I got my hands on <a href="https://github.com/datafuselabs/databend">Databend</a>, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage. Benchmarks comparing its performance with alternative open-source solutions <a href="https://benchmark.clickhouse.com/">ClickBench</a> and <a href="https://medium.com/@databend/tpc-h-benchmark-databend-cloud-vs-snowflake-aa97971c32a0">with cloud alternatives</a> show some interesting results.</p>
-<p>I briefly went through the documentation to figure out how to try things out - and, of course, there was a tutorial on how to set it up locally with MinIO or locally with Docker. I didn&rsquo;t even try this because what I would get locally in that case would only be a loosely implemented SQL dialect, whereas I needed the power of distributed computation at my fingertips. So, I went with the K8S setup, even though, having only a handful of microservices in the current organization, we don&rsquo;t use it in production. It took me no time to discover a great way to provision and control a k8s cluster on AWS without the need for Terraform - <a href="https://eksctl.io/#">eksctl</a>. After some dancing with the documentation and setting up the <a href="https://docs.databend.com/guides/deploy/cluster/deploying-databend-on-kubernetes">recommended helm charts and applications</a> (beware, &ldquo;recommended&rdquo; in this guide is almost always mandatory - and even if not, you surely want to monitor your cluster after setting it up).</p>
+<p>I briefly went through the documentation to figure out how to try things out - and, of course, there was a tutorial on how to set it up locally with MinIO or locally with Docker. I didn&rsquo;t even try this because what I would get locally in that case would only be a loosely implemented SQL dialect, whereas I needed the power of distributed computation at my fingertips. So, I went with the K8S setup, even though, having only a handful of microservices in the current organization, we don&rsquo;t use it in production. It took me no time to discover a great way to provision and control a k8s cluster on AWS without the need for Terraform - <a href="https://eksctl.io/">eksctl</a>. After some dancing with the documentation and setting up the <a href="https://docs.databend.com/guides/deploy/cluster/deploying-databend-on-kubernetes">recommended helm charts and applications</a> (beware, &ldquo;recommended&rdquo; in this guide is almost always mandatory - and even if not, you surely want to monitor your cluster after setting it up).</p>
 <p>I decided to use a few smaller on-demand nodes for databend-meta nodes and a node group with spot instances having more beef in terms of networking/memory/CPU (in that order), with the ability to interchange things in the future. After some tuning, I was able to find a setup that was giving enough performance without breaking the bank and managed to reproduce some production queries we use with AWS Redshift.</p>
 <p>Getting this result on the client was already quite pleasant, where I thought it&rsquo;s about to start working as intended:</p>
 <pre tabindex="0"><code>34 rows read in 73.337 sec. Processed 753.26 million rows, 100.63 GiB (10.27 million rows/s, 1.37 GiB/s)
@@ -224,6 +227,13 @@
       <hr />
     </div>
     <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="https://www.changes.md/post/portal/">
+          <span class="button__icon">←</span>
+          <span class="button__text">3D-printed portal gun replica</span>
+        </a>
+      </span>
       
       
       <span class="button next">
