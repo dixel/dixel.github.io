@@ -6,13 +6,11 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy."/>
+<meta name="description" content="For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy.
+"/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://www.changes.md/post/2019-12-14-jdbc-next/" />
-
-
-  
 
 
 
@@ -34,7 +32,8 @@
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Querying the databases from REPL :: CHANGES.md — " />
-<meta name="twitter:description" content="For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy." />
+<meta name="twitter:description" content="For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy.
+" />
 <meta name="twitter:site" content="https://www.changes.md/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="">
@@ -43,7 +42,8 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Querying the databases from REPL :: CHANGES.md — ">
-<meta property="og:description" content="For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy." />
+<meta property="og:description" content="For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy.
+" />
 <meta property="og:url" content="https://www.changes.md/post/2019-12-14-jdbc-next/" />
 <meta property="og:site_name" content="Querying the databases from REPL" />
 <meta property="og:image" content="">
@@ -94,6 +94,10 @@
         
       
         
+          <li><a href="/contracts">Contracts</a></li>
+        
+      
+        
           <li><a href="https://github.com/dixel">Github</a></li>
         
       
@@ -101,15 +105,15 @@
           <li><a href="https://mastodon.social/@dixel">Mastodon</a></li>
         
       
-        
-          <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
-        
-      
       
         <ul class="menu__sub-inner">
-          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
+          <li class="menu__sub-inner-more-trigger"> ▾</li>
 
           <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
+              
             
               
                 <li><a href="https://twitter.com/dixelt">Twitter</a></li>
@@ -131,6 +135,10 @@
     
       
         <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
+      
+    
+      
+        <li><a href="/contracts">Contracts</a></li>
       
     
       
@@ -214,7 +222,7 @@ other database solutions. I also want to try out few things that are sound these
 </span></span><span style="display:flex;"><span>        org.clojure/data.csv {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.1.4&#34;</span>}}}
 </span></span></code></pre></div><p>Working with the project in <code>emacs</code> is relatively straightforward, all the environment started to work for me pretty smooth and
 I was already able to see the codebase working:</p>
-<p><a href="https://asciinema.org/a/RSvkHm22gDgayOqDenbLkkh05?speed=2"><img alt="asciicast" src="https://asciinema.org/a/RSvkHm22gDgayOqDenbLkkh05.svg"></a></p>
+<p><a href="https://asciinema.org/a/RSvkHm22gDgayOqDenbLkkh05?speed=2"><img src="https://asciinema.org/a/RSvkHm22gDgayOqDenbLkkh05.svg" alt="asciicast"></a></p>
 <p>Now it&rsquo;s the time to package the whole and make it run as a standalone jar. That was a bit tricky, because I wasn&rsquo;t familiar at
 all with the new uberjar ecosystem. Tried several approaches:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>{<span style="color:#e6db74">:uberjar</span> {<span style="color:#e6db74">:extra-deps</span> {uberdeps {<span style="color:#e6db74">:mvn/version</span> <span style="color:#e6db74">&#34;0.1.6&#34;</span>}}
@@ -231,7 +239,7 @@ this is the main reason for choosing the tool unfortunately and very positive ex
   <div class="pagination">
     <div class="pagination__title">
       <span
-        class="pagination__title-h">Read other posts</span>
+        class="pagination__title-h"></span>
       <hr />
     </div>
     <div class="pagination__buttons">
@@ -266,7 +274,7 @@ this is the main reason for choosing the tool unfortunately and very positive ex
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2026 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

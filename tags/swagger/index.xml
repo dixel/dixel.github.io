@@ -13,7 +13,7 @@
       <link>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</guid>
-      <description>OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies. Let&amp;rsquo;s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.&#xA;I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.</description>
+      <description>&lt;p&gt;OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies.&#xA;Let&amp;rsquo;s say your organization wants to follow the API-first approach.&#xA;It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract,&#xA;and review it.&lt;/p&gt;&#xA;&lt;p&gt;I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company.&#xA;Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.&#xA;When I joined Zalando in 2017 I was very happy to see this approach being adopted company-wise.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

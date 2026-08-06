@@ -6,14 +6,12 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
-Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto."/>
+<meta name="description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&rsquo;s an example on how things can work out in clojure.
+Let&rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.
+"/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://www.changes.md/post/simple-data-clojure/" />
-
-
-  
 
 
 
@@ -35,8 +33,9 @@ Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the m
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Simple data-driven applications in Clojure :: CHANGES.md — " />
-<meta name="twitter:description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
-Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto." />
+<meta name="twitter:description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&rsquo;s an example on how things can work out in clojure.
+Let&rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.
+" />
 <meta name="twitter:site" content="https://www.changes.md/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="">
@@ -45,8 +44,9 @@ Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the m
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Simple data-driven applications in Clojure :: CHANGES.md — ">
-<meta property="og:description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&amp;rsquo;s an example on how things can work out in clojure.
-Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto." />
+<meta property="og:description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&rsquo;s an example on how things can work out in clojure.
+Let&rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.
+" />
 <meta property="og:url" content="https://www.changes.md/post/simple-data-clojure/" />
 <meta property="og:site_name" content="Simple data-driven applications in Clojure" />
 <meta property="og:image" content="">
@@ -97,6 +97,10 @@ Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the m
         
       
         
+          <li><a href="/contracts">Contracts</a></li>
+        
+      
+        
           <li><a href="https://github.com/dixel">Github</a></li>
         
       
@@ -104,15 +108,15 @@ Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the m
           <li><a href="https://mastodon.social/@dixel">Mastodon</a></li>
         
       
-        
-          <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
-        
-      
       
         <ul class="menu__sub-inner">
-          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
+          <li class="menu__sub-inner-more-trigger"> ▾</li>
 
           <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
+              
             
               
                 <li><a href="https://twitter.com/dixelt">Twitter</a></li>
@@ -134,6 +138,10 @@ Let&amp;rsquo;s say we have an SQL-based engine like Presto (or Presto) as the m
     
       
         <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
+      
+    
+      
+        <li><a href="/contracts">Contracts</a></li>
       
     
       
@@ -213,7 +221,7 @@ Let&rsquo;s check how we can leverage the power of Clojure to build a simple app
 <li>API</li>
 </ul>
 <p>Easy!</p>
-<p><img alt="resource" src="/static/app.png"></p>
+<p><img src="/static/app.png" alt="resource"></p>
 <p>Even if you never worked with Clojure, it&rsquo;s quite easy to get started. Once you fight your way through the syntax, you
 may realise that there are not so many things happening in the application apart from what you actually wanted to do - link
 your data source to the API.</p>
@@ -284,7 +292,7 @@ and handle other storage solutions.</p>
   <div class="pagination">
     <div class="pagination__title">
       <span
-        class="pagination__title-h">Read other posts</span>
+        class="pagination__title-h"></span>
       <hr />
     </div>
     <div class="pagination__buttons">
@@ -319,7 +327,7 @@ and handle other storage solutions.</p>
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2026 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

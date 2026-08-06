@@ -12,9 +12,6 @@
 <link rel="canonical" href="https://www.changes.md/post/" />
 
 
-  
-
-
 
 
 <link rel="stylesheet" href="https://www.changes.md/assets/style.css">
@@ -96,6 +93,10 @@
         
       
         
+          <li><a href="/contracts">Contracts</a></li>
+        
+      
+        
           <li><a href="https://github.com/dixel">Github</a></li>
         
       
@@ -103,15 +104,15 @@
           <li><a href="https://mastodon.social/@dixel">Mastodon</a></li>
         
       
-        
-          <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
-        
-      
       
         <ul class="menu__sub-inner">
-          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
+          <li class="menu__sub-inner-more-trigger"> ▾</li>
 
           <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
+              
             
               
                 <li><a href="https://twitter.com/dixelt">Twitter</a></li>
@@ -133,6 +134,10 @@
     
       
         <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
+      
+    
+      
+        <li><a href="/contracts">Contracts</a></li>
       
     
       
@@ -200,9 +205,14 @@
     <div class="post-content">
       
       
-      Just finished my first large 3D-printing project. For sure I couldn’t pass by when I saw this amazing portal gun replica from @KirbyDowney_65 on Printables. Here I’d simply like to share some highlights and happy moments I had while doing it.
-I started by printing claws and assembling them, as they seemed the most fragile and tricky to assemble, but not so time-consuming when printing.
-A few more printing sessions and the remaining black parts were also done:
+      <p><img src="/static/portal-gun.excalidraw.png" alt="resource"></p>
+<p>Just finished my first large 3D-printing project.
+For sure I couldn&rsquo;t pass by when I saw <a href="https://www.printables.com/model/217-portal-gun">this amazing portal gun replica</a> from <a href="https://www.printables.com/@KirbyDowney_65">@KirbyDowney_65</a> on Printables.
+Here I&rsquo;d simply like to share some highlights and happy moments I had while doing it.</p>
+<p>I started by printing claws and assembling them, as they seemed the most fragile and tricky to assemble, but
+not so time-consuming when printing.</p>
+<p><img src="/static/claws-print.jpg" alt="resource"></p>
+<p>A few more printing sessions and the remaining black parts were also done:</p>
       
       
     </div>
@@ -245,7 +255,8 @@ A few more printing sessions and the remaining black parts were also done:
     <div class="post-content">
       
       
-      Over the Christmas silent period, I got my hands on Databend, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it’s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years’ fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage.
+      <p><img src="/static/databend.png" alt="resource"></p>
+<p>Over the Christmas silent period, I got my hands on <a href="https://github.com/datafuselabs/databend">Databend</a>, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage. Benchmarks comparing its performance with alternative open-source solutions <a href="https://benchmark.clickhouse.com/">ClickBench</a> and <a href="https://medium.com/@databend/tpc-h-benchmark-databend-cloud-vs-snowflake-aa97971c32a0">with cloud alternatives</a> show some interesting results.</p>
       
       
     </div>
@@ -312,10 +323,14 @@ A few more printing sessions and the remaining black parts were also done:
     <div class="post-content">
       
       
-      Last saturday I visited my second ClojureD conference in Berlin. It’s an amazing experience meeting people who indirectly influenced my choice of programming language for the past several years (kudos to Alexander and Nikita).
-It’s also very pleasant to see how many new things popped up recently in Clojure community.
-Here are few highlights I wanted to share:
-Babashka by @borkdude (github) Really appreciate how much effort Michael puts into the modern tooling for Clojure!
+      <p>Last saturday I visited my second ClojureD conference in Berlin.
+It&rsquo;s an amazing experience meeting people who indirectly influenced my choice of programming language for the past several years
+(kudos to Alexander and Nikita).</p>
+<p>It&rsquo;s also very pleasant to see how many new things popped up recently in Clojure community.</p>
+<p>Here are few highlights I wanted to share:</p>
+<p><img src="/static/babashka.png" alt="resource">
+<em>Babashka by <a href="https://twitter.com/borkdude">@borkdude</a> (<a href="https://github.com/borkdude/babashka">github</a>)
+Really appreciate how much effort Michael puts into the modern tooling for Clojure!</em></p>
       
       
     </div>
@@ -345,7 +360,11 @@ Babashka by @borkdude (github) Really appreciate how much effort Michael puts in
     <div class="post-content">
       
       
-      For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases. At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having a single consistent SQL read-only API to them is crucial for productivity. Additional benefit compared to the graphical tools available in the market is the ability of programmatic post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy.
+      <p>For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases.
+At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having
+a single consistent SQL read-only API to them is crucial for productivity.
+Additional benefit compared to the graphical tools available in the market is the ability of programmatic
+post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy.</p>
       
       
     </div>
@@ -375,7 +394,17 @@ Babashka by @borkdude (github) Really appreciate how much effort Michael puts in
     <div class="post-content">
       
       
-      My December present to myself was a series of books. One of them was called “Mastering Clojure Data Analysis” by Eric Rochester. It contains a comprehensive set of examples on analysing and visualising data using Clojure. I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with daily work, so I thought “why not?”. Once I got the book, I realised what’d be the biggest challenge.
+      <p>My December present to myself was a series of books. One of them was called &ldquo;<a href="https://www.oreilly.com/library/view/mastering-clojure-data/9781783284139/">Mastering Clojure Data Analysis</a>&rdquo; by Eric Rochester.
+It contains a comprehensive set of examples on analysing and visualising data using Clojure.
+I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with
+daily work, so I thought &ldquo;why not?&rdquo;.
+Once I got the book, I realised what&rsquo;d be the biggest challenge. It&rsquo;s first written in 2014, and Clojure tooling made an enormous leap
+in this 5 years.
+Obstacle? No, challenge! I really wanted to get my hands dirty with some of the examples in there,
+but I also resisted to use outdated libraries and tools. Also long time ago wanted to start using <code>deps.edn</code> and it was also a good opportunity to
+to do that.
+So, long story short, the process began. I read through and roughly got 60% of the idea of the first Chapter (facebook graph analysis).
+But for sure, real problem solving goes second, but setting up the tooling goes first!</p>
       
       
     </div>
@@ -405,8 +434,6 @@ Babashka by @borkdude (github) Really appreciate how much effort Michael puts in
     <div class="post-content">
       
       
-      Any design is not perfect. There needs to be a way to evolve away from any decision. Components have different lifecycles. Components have different levels of criticality. Those components should have a very clean interface between each other and an outstanding level of isolation. Replaceable &gt; Extendable, because the latter is more opinionated. The lifetime of the components should be challenged at all times. Proven technologies should be maintained in a conservative way.
-      
       
     </div>
 
@@ -435,8 +462,12 @@ Babashka by @borkdude (github) Really appreciate how much effort Michael puts in
     <div class="post-content">
       
       
-      Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here’s an example on how things can work out in clojure.
-Let’s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let’s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.
+      <p>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api.
+Just getting the tooling right sometimes may be troublesome.
+Here&rsquo;s an example on how things can work out in clojure.</p>
+<p>Let&rsquo;s say we have an SQL-based engine like <a href="https://prestosql.io/">Presto</a> (or <a href="https://prestodb.github.io/">Presto</a>)
+as the main interface to the datalake.
+Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</p>
       
       
     </div>
@@ -479,8 +510,13 @@ Let’s say we have an SQL-based engine like Presto (or Presto) as the main inte
     <div class="post-content">
       
       
-      OpenAPI specification drills it’s ways into becoming a standard in many software companies. Let’s say your organization wants to follow the API-first approach. It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract, and review it.
-I had this approach in mind since I’ve started working in a small payment provider company. Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.
+      <p>OpenAPI specification drills it&rsquo;s ways into becoming a standard in many software companies.
+Let&rsquo;s say your organization wants to follow the API-first approach.
+It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract,
+and review it.</p>
+<p>I had this approach in mind since I&rsquo;ve started working in a small payment provider company.
+Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.
+When I joined Zalando in 2017 I was very happy to see this approach being adopted company-wise.</p>
       
       
     </div>
@@ -509,7 +545,7 @@ I had this approach in mind since I’ve started working in a small payment prov
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>© 2026 Powered by <a href="http://gohugo.io">Hugo</a></span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>
