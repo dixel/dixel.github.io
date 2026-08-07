@@ -2,83 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/post/portal/</loc>
+    <loc>https://www.changes.md/post/portal/</loc>
     <lastmod>2024-04-28T17:52:14+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/3d-printing/</loc>
+    <loc>https://www.changes.md/tags/3d-printing/</loc>
     <lastmod>2024-04-28T17:52:14+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://www.changes.md/</loc>
     <lastmod>2024-04-28T17:52:14+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/diy/</loc>
+    <loc>https://www.changes.md/tags/diy/</loc>
     <lastmod>2024-04-28T17:52:14+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/electronics/</loc>
+    <loc>https://www.changes.md/tags/electronics/</loc>
     <lastmod>2024-04-28T17:52:14+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hobby/</loc>
+    <loc>https://www.changes.md/tags/hobby/</loc>
     <lastmod>2024-04-28T17:52:14+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://www.changes.md/post/</loc>
     <lastmod>2024-04-28T17:52:14+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://www.changes.md/tags/</loc>
     <lastmod>2024-04-28T17:52:14+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cloud/</loc>
+    <loc>https://www.changes.md/tags/cloud/</loc>
     <lastmod>2024-02-04T20:51:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data/</loc>
+    <loc>https://www.changes.md/tags/data/</loc>
     <lastmod>2024-02-04T20:51:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data-engineering/</loc>
+    <loc>https://www.changes.md/tags/data-engineering/</loc>
     <lastmod>2024-02-04T20:51:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/databend/</loc>
+    <loc>https://www.changes.md/tags/databend/</loc>
     <lastmod>2024-02-04T20:51:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/databend/</loc>
+    <loc>https://www.changes.md/post/databend/</loc>
     <lastmod>2024-02-04T20:51:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/flipper/</loc>
+    <loc>https://www.changes.md/tags/flipper/</loc>
     <lastmod>2022-10-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/flipper-zero/</loc>
+    <loc>https://www.changes.md/post/flipper-zero/</loc>
     <lastmod>2022-10-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2020-02-02-clojured/</loc>
+    <loc>https://www.changes.md/post/2020-02-02-clojured/</loc>
     <lastmod>2020-03-02T21:10:17+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2019-12-14-jdbc-next/</loc>
+    <loc>https://www.changes.md/post/2019-12-14-jdbc-next/</loc>
     <lastmod>2019-12-14T13:56:14+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2019-12-08-mastering-data/</loc>
+    <loc>https://www.changes.md/post/2019-12-08-mastering-data/</loc>
     <lastmod>2019-12-08T23:13:46+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/stuff/</loc>
+    <loc>https://www.changes.md/post/stuff/</loc>
     <lastmod>2019-05-01T12:09:08+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/simple-data-clojure/</loc>
+    <loc>https://www.changes.md/post/simple-data-clojure/</loc>
     <lastmod>2019-04-06T23:44:14+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://www.changes.md/about/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2019-03-30-3-clojure-swagger/</loc>
+    <loc>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/clojure/</loc>
+    <loc>https://www.changes.md/tags/clojure/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/openapi/</loc>
+    <loc>https://www.changes.md/tags/openapi/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/swagger/</loc>
+    <loc>https://www.changes.md/tags/swagger/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://www.changes.md/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/freelance/</loc>
+    <loc>https://www.changes.md/freelance/</loc>
   </url>
 </urlset>
