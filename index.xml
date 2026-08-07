@@ -2,88 +2,88 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CHANGES.md</title>
-    <link>https://www.changes.md/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on CHANGES.md</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 28 Apr 2024 17:52:14 +0200</lastBuildDate>
-    <atom:link href="https://www.changes.md/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3D-printed portal gun replica</title>
-      <link>https://www.changes.md/post/portal/</link>
+      <link>http://localhost:1313/post/portal/</link>
       <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/post/portal/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.changes.md/static/portal-gun.excalidraw.png&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Just finished my first large 3D-printing project.&#xA;For sure I couldn&amp;rsquo;t pass by when I saw &lt;a href=&#34;https://www.printables.com/model/217-portal-gun&#34;&gt;this amazing portal gun replica&lt;/a&gt; from &lt;a href=&#34;https://www.printables.com/@KirbyDowney_65&#34;&gt;@KirbyDowney_65&lt;/a&gt; on Printables.&#xA;Here I&amp;rsquo;d simply like to share some highlights and happy moments I had while doing it.&lt;/p&gt;&#xA;&lt;p&gt;I started by printing claws and assembling them, as they seemed the most fragile and tricky to assemble, but&#xA;not so time-consuming when printing.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.changes.md/static/claws-print.jpg&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;A few more printing sessions and the remaining black parts were also done:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/post/portal/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/static/portal-gun.excalidraw.png&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Just finished my first large 3D-printing project.&#xA;For sure I couldn&amp;rsquo;t pass by when I saw &lt;a href=&#34;https://www.printables.com/model/217-portal-gun&#34;&gt;this amazing portal gun replica&lt;/a&gt; from &lt;a href=&#34;https://www.printables.com/@KirbyDowney_65&#34;&gt;@KirbyDowney_65&lt;/a&gt; on Printables.&#xA;Here I&amp;rsquo;d simply like to share some highlights and happy moments I had while doing it.&lt;/p&gt;&#xA;&lt;p&gt;I started by printing claws and assembling them, as they seemed the most fragile and tricky to assemble, but&#xA;not so time-consuming when printing.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/static/claws-print.jpg&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;A few more printing sessions and the remaining black parts were also done:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Databend on AWS/EKS</title>
-      <link>https://www.changes.md/post/databend/</link>
+      <link>http://localhost:1313/post/databend/</link>
       <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/post/databend/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.changes.md/static/databend.png&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Over the Christmas silent period, I got my hands on &lt;a href=&#34;https://github.com/datafuselabs/databend&#34;&gt;Databend&lt;/a&gt;, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage. Benchmarks comparing its performance with alternative open-source solutions &lt;a href=&#34;https://benchmark.clickhouse.com/&#34;&gt;ClickBench&lt;/a&gt; and &lt;a href=&#34;https://medium.com/@databend/tpc-h-benchmark-databend-cloud-vs-snowflake-aa97971c32a0&#34;&gt;with cloud alternatives&lt;/a&gt; show some interesting results.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/post/databend/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/static/databend.png&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Over the Christmas silent period, I got my hands on &lt;a href=&#34;https://github.com/datafuselabs/databend&#34;&gt;Databend&lt;/a&gt;, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage. Benchmarks comparing its performance with alternative open-source solutions &lt;a href=&#34;https://benchmark.clickhouse.com/&#34;&gt;ClickBench&lt;/a&gt; and &lt;a href=&#34;https://medium.com/@databend/tpc-h-benchmark-databend-cloud-vs-snowflake-aa97971c32a0&#34;&gt;with cloud alternatives&lt;/a&gt; show some interesting results.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Flipper Zero for testing old dusty electronic components</title>
-      <link>https://www.changes.md/post/flipper-zero/</link>
+      <link>http://localhost:1313/post/flipper-zero/</link>
       <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/post/flipper-zero/</guid>
+      <guid>http://localhost:1313/post/flipper-zero/</guid>
       <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/m2_ccCqGI8Q?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;dimmable-led&#34;&gt;Dimmable LED&lt;/h2&gt;&#xA;&lt;p&gt;On high frequencies (&amp;gt; 50 Hz), blinking of a LED becomes undistinguishable from a bright light.&#xA;By using pulse width, the &amp;ldquo;brightness&amp;rdquo;, or it&amp;rsquo;s perception can be controlled.&lt;/p&gt;&#xA;&lt;h2 id=&#34;servo&#34;&gt;Servo&lt;/h2&gt;&#xA;&lt;p&gt;When I first encountered this device &lt;a href=&#34;https://en.wikipedia.org/wiki/Servo_%28radio_control%29&#34;&gt;servo&lt;/a&gt;, I got really confused,&#xA;as the way it actually moves towards a certain angle is rather cumbersome. For this specific servo (the one I got with my ARDX)&#xA;the following settings allowed me to control 180 degrees of angle with a step of 9 degrees:&lt;/p&gt;</description>
     </item>
     <item>
       <title>ClojureD 2020</title>
-      <link>https://www.changes.md/post/2020-02-02-clojured/</link>
+      <link>http://localhost:1313/post/2020-02-02-clojured/</link>
       <pubDate>Mon, 02 Mar 2020 21:10:17 +0100</pubDate>
-      <guid>https://www.changes.md/post/2020-02-02-clojured/</guid>
-      <description>&lt;p&gt;Last saturday I visited my second ClojureD conference in Berlin.&#xA;It&amp;rsquo;s an amazing experience meeting people who indirectly influenced my choice of programming language for the past several years&#xA;(kudos to Alexander and Nikita).&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s also very pleasant to see how many new things popped up recently in Clojure community.&lt;/p&gt;&#xA;&lt;p&gt;Here are few highlights I wanted to share:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.changes.md/static/babashka.png&#34; alt=&#34;resource&#34;&gt;&#xA;&lt;em&gt;Babashka by &lt;a href=&#34;https://twitter.com/borkdude&#34;&gt;@borkdude&lt;/a&gt; (&lt;a href=&#34;https://github.com/borkdude/babashka&#34;&gt;github&lt;/a&gt;)&#xA;Really appreciate how much effort Michael puts into the modern tooling for Clojure!&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/post/2020-02-02-clojured/</guid>
+      <description>&lt;p&gt;Last saturday I visited my second ClojureD conference in Berlin.&#xA;It&amp;rsquo;s an amazing experience meeting people who indirectly influenced my choice of programming language for the past several years&#xA;(kudos to Alexander and Nikita).&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s also very pleasant to see how many new things popped up recently in Clojure community.&lt;/p&gt;&#xA;&lt;p&gt;Here are few highlights I wanted to share:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/static/babashka.png&#34; alt=&#34;resource&#34;&gt;&#xA;&lt;em&gt;Babashka by &lt;a href=&#34;https://twitter.com/borkdude&#34;&gt;@borkdude&lt;/a&gt; (&lt;a href=&#34;https://github.com/borkdude/babashka&#34;&gt;github&lt;/a&gt;)&#xA;Really appreciate how much effort Michael puts into the modern tooling for Clojure!&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Querying the databases from REPL</title>
-      <link>https://www.changes.md/post/2019-12-14-jdbc-next/</link>
+      <link>http://localhost:1313/post/2019-12-14-jdbc-next/</link>
       <pubDate>Sat, 14 Dec 2019 13:56:14 +0100</pubDate>
-      <guid>https://www.changes.md/post/2019-12-14-jdbc-next/</guid>
+      <guid>http://localhost:1313/post/2019-12-14-jdbc-next/</guid>
       <description>&lt;p&gt;For already quite some time I prefer using Clojure REPL instead of any other tools for querying the databases.&#xA;At work we have variety of the storage solutions available (Postgres, Aurora, Presto, Hive), and having&#xA;a single consistent SQL read-only API to them is crucial for productivity.&#xA;Additional benefit compared to the graphical tools available in the market is the ability of programmatic&#xA;post-processing of the data using higher-level language. Being very data-oriented, Clojure comes really handy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mastering the Tooling around Clojure Data Analysis</title>
-      <link>https://www.changes.md/post/2019-12-08-mastering-data/</link>
+      <link>http://localhost:1313/post/2019-12-08-mastering-data/</link>
       <pubDate>Sun, 08 Dec 2019 23:13:46 +0100</pubDate>
-      <guid>https://www.changes.md/post/2019-12-08-mastering-data/</guid>
+      <guid>http://localhost:1313/post/2019-12-08-mastering-data/</guid>
       <description>&lt;p&gt;My December present to myself was a series of books. One of them was called &amp;ldquo;&lt;a href=&#34;https://www.oreilly.com/library/view/mastering-clojure-data/9781783284139/&#34;&gt;Mastering Clojure Data Analysis&lt;/a&gt;&amp;rdquo; by Eric Rochester.&#xA;It contains a comprehensive set of examples on analysing and visualising data using Clojure.&#xA;I found it quite interesting mainly because a couple of use-cases covered in the book correllated very well with&#xA;daily work, so I thought &amp;ldquo;why not?&amp;rdquo;.&#xA;Once I got the book, I realised what&amp;rsquo;d be the biggest challenge. It&amp;rsquo;s first written in 2014, and Clojure tooling made an enormous leap&#xA;in this 5 years.&#xA;Obstacle? No, challenge! I really wanted to get my hands dirty with some of the examples in there,&#xA;but I also resisted to use outdated libraries and tools. Also long time ago wanted to start using &lt;code&gt;deps.edn&lt;/code&gt; and it was also a good opportunity to&#xA;to do that.&#xA;So, long story short, the process began. I read through and roughly got 60% of the idea of the first Chapter (facebook graph analysis).&#xA;But for sure, real problem solving goes second, but setting up the tooling goes first!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Complicated data-driven applications</title>
-      <link>https://www.changes.md/post/stuff/</link>
+      <link>http://localhost:1313/post/stuff/</link>
       <pubDate>Wed, 01 May 2019 12:09:08 +0200</pubDate>
-      <guid>https://www.changes.md/post/stuff/</guid>
+      <guid>http://localhost:1313/post/stuff/</guid>
       <description>&lt;ol&gt;&#xA;&lt;li&gt;Any design is not perfect.&lt;/li&gt;&#xA;&lt;li&gt;There needs to be a way to evolve away from any decision.&lt;/li&gt;&#xA;&lt;li&gt;Components have different lifecycles.&lt;/li&gt;&#xA;&lt;li&gt;Components have different levels of criticality.&lt;/li&gt;&#xA;&lt;li&gt;Those components should have a very clean interface between each other and an outstanding level of isolation.&lt;/li&gt;&#xA;&lt;li&gt;Replaceable &amp;gt; Extendable, because the latter is more opinionated.&lt;/li&gt;&#xA;&lt;li&gt;The lifetime of the components should be challenged at all times.&lt;/li&gt;&#xA;&lt;li&gt;Proven technologies should be maintained in a conservative way.&lt;/li&gt;&#xA;&lt;li&gt;Solutions that open more opportunities should prevail the ones that put more restrictions on the follow-up design.&lt;/li&gt;&#xA;&lt;li&gt;The criticality of the components should be challenged at all times.&lt;/li&gt;&#xA;&lt;li&gt;If you&amp;rsquo;re not the light, it&amp;rsquo;s hard to reach it&amp;rsquo;s speed.&lt;/li&gt;&#xA;&lt;li&gt;Critical thinking &amp;gt; Lists from the internet, because the latter is more opinionated.&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
       <title>Simple data-driven applications in Clojure</title>
-      <link>https://www.changes.md/post/simple-data-clojure/</link>
+      <link>http://localhost:1313/post/simple-data-clojure/</link>
       <pubDate>Sat, 06 Apr 2019 23:44:14 +0200</pubDate>
-      <guid>https://www.changes.md/post/simple-data-clojure/</guid>
+      <guid>http://localhost:1313/post/simple-data-clojure/</guid>
       <description>&lt;p&gt;Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api.&#xA;Just getting the tooling right sometimes may be troublesome.&#xA;Here&amp;rsquo;s an example on how things can work out in clojure.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s say we have an SQL-based engine like &lt;a href=&#34;https://prestosql.io/&#34;&gt;Presto&lt;/a&gt; (or &lt;a href=&#34;https://prestodb.github.io/&#34;&gt;Presto&lt;/a&gt;)&#xA;as the main interface to the datalake.&#xA;Let&amp;rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>https://www.changes.md/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;h1 id=&#34;notes-about-my-life&#34;&gt;Notes about my life&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    1996        2008       2009        2011        2015        2018       2021&#xA;-- Saint-Petersburg ------------------------------- Hamburg -------------------------&#xA;------- Programming --- Embedded ---- High load ---- Data -----------Tech leadership-&#xA;------- C/C++ ---- Python ------------ Erlang ----- Clojure -------------------------&#xA;------------- Guitar ------------------------------------------ Parenting -----------&#xA;--------------- Climbing --------- Biking ---- Snowboarding -------------------------&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>3 libraries to work with swagger in Clojure</title>
-      <link>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</link>
+      <link>http://localhost:1313/post/2019-03-30-3-clojure-swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/post/2019-03-30-3-clojure-swagger/</guid>
+      <guid>http://localhost:1313/post/2019-03-30-3-clojure-swagger/</guid>
       <description>&lt;p&gt;OpenAPI specification drills it&amp;rsquo;s ways into becoming a standard in many software companies.&#xA;Let&amp;rsquo;s say your organization wants to follow the API-first approach.&#xA;It means that before implementing any cross-team (or 3d party integration) functionality, the parties first agree on the contract,&#xA;and review it.&lt;/p&gt;&#xA;&lt;p&gt;I had this approach in mind since I&amp;rsquo;ve started working in a small payment provider company.&#xA;Contracts there meant everything, and negotiating the API/authentication process was basically 80% of the job.&#xA;When I joined Zalando in 2017 I was very happy to see this approach being adopted company-wise.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Freelance Data &amp; Platform Engineering</title>
-      <link>https://www.changes.md/contracts/</link>
+      <title>Freelance</title>
+      <link>http://localhost:1313/freelance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/contracts/</guid>
-      <description>&lt;p&gt;I help companies design and modernize cloud-native data platforms, streaming architectures and engineering processes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-i-can-help-with&#34;&gt;What I can help with&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Interim Data / Platform Engineering Leadership&lt;/li&gt;&#xA;&lt;li&gt;Data platform and event-driven architecture&lt;/li&gt;&#xA;&lt;li&gt;Apache Kafka and streaming infrastructure&lt;/li&gt;&#xA;&lt;li&gt;AWS, Kubernetes and Terraform&lt;/li&gt;&#xA;&lt;li&gt;Databricks, Spark and analytics platforms&lt;/li&gt;&#xA;&lt;li&gt;Technical strategy and hands-on implementation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;selected-experience&#34;&gt;Selected experience&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Built and modernized Kafka-based streaming platforms&lt;/li&gt;&#xA;&lt;li&gt;Led data and software engineering teams&lt;/li&gt;&#xA;&lt;li&gt;Designed cloud infrastructure for large-scale AI workloads&lt;/li&gt;&#xA;&lt;li&gt;Migrated legacy data systems to modern AWS and Databricks platforms&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;availability&#34;&gt;Availability&lt;/h2&gt;&#xA;&lt;p&gt;Available for freelance and interim projects, primarily remote with occasional onsite workshops in Europe.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/freelance/</guid>
+      <description>&lt;h1 id=&#34;engineering-consulting&#34;&gt;Engineering Consulting&lt;/h1&gt;&#xA;&lt;p&gt;I help companies design, modernize and scale data platforms, cloud infrastructure and engineering organizations.&lt;/p&gt;&#xA;&lt;p&gt;My work ranges from small hands-on infrastructure projects to establishing complete technical platforms and building the teams that can own and evolve them afterwards.&lt;/p&gt;&#xA;&lt;p&gt;Over the last 14+ years, I have worked across startups, scale-ups and enterprise environments, taking systems from early prototypes to production platforms used across entire engineering organizations.&lt;/p&gt;&#xA;&lt;h2 id=&#34;typical-engagements&#34;&gt;Typical engagements&lt;/h2&gt;&#xA;&lt;h3 id=&#34;platform-architecture&#34;&gt;Platform Architecture&lt;/h3&gt;&#xA;&lt;p&gt;Designing technical platforms that engineering teams can successfully build upon.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

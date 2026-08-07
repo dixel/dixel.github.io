@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CHANGES.md</title>
-    <link>https://www.changes.md/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on CHANGES.md</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 28 Apr 2024 17:52:14 +0200</lastBuildDate>
-    <atom:link href="https://www.changes.md/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3D-Printing</title>
-      <link>https://www.changes.md/tags/3d-printing/</link>
+      <link>http://localhost:1313/tags/3d-printing/</link>
       <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/tags/3d-printing/</guid>
+      <guid>http://localhost:1313/tags/3d-printing/</guid>
       <description></description>
     </item>
     <item>
       <title>Diy</title>
-      <link>https://www.changes.md/tags/diy/</link>
+      <link>http://localhost:1313/tags/diy/</link>
       <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/tags/diy/</guid>
+      <guid>http://localhost:1313/tags/diy/</guid>
       <description></description>
     </item>
     <item>
       <title>Electronics</title>
-      <link>https://www.changes.md/tags/electronics/</link>
+      <link>http://localhost:1313/tags/electronics/</link>
       <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/tags/electronics/</guid>
+      <guid>http://localhost:1313/tags/electronics/</guid>
       <description></description>
     </item>
     <item>
       <title>Hobby</title>
-      <link>https://www.changes.md/tags/hobby/</link>
+      <link>http://localhost:1313/tags/hobby/</link>
       <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/tags/hobby/</guid>
+      <guid>http://localhost:1313/tags/hobby/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>https://www.changes.md/tags/cloud/</link>
+      <link>http://localhost:1313/tags/cloud/</link>
       <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/tags/cloud/</guid>
+      <guid>http://localhost:1313/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Data</title>
-      <link>https://www.changes.md/tags/data/</link>
+      <link>http://localhost:1313/tags/data/</link>
       <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/tags/data/</guid>
+      <guid>http://localhost:1313/tags/data/</guid>
       <description></description>
     </item>
     <item>
       <title>Data-Engineering</title>
-      <link>https://www.changes.md/tags/data-engineering/</link>
+      <link>http://localhost:1313/tags/data-engineering/</link>
       <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/tags/data-engineering/</guid>
+      <guid>http://localhost:1313/tags/data-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Databend</title>
-      <link>https://www.changes.md/tags/databend/</link>
+      <link>http://localhost:1313/tags/databend/</link>
       <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/tags/databend/</guid>
+      <guid>http://localhost:1313/tags/databend/</guid>
       <description></description>
     </item>
     <item>
       <title>Flipper</title>
-      <link>https://www.changes.md/tags/flipper/</link>
+      <link>http://localhost:1313/tags/flipper/</link>
       <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/tags/flipper/</guid>
+      <guid>http://localhost:1313/tags/flipper/</guid>
       <description></description>
     </item>
     <item>
       <title>Clojure</title>
-      <link>https://www.changes.md/tags/clojure/</link>
+      <link>http://localhost:1313/tags/clojure/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/tags/clojure/</guid>
+      <guid>http://localhost:1313/tags/clojure/</guid>
       <description></description>
     </item>
     <item>
       <title>Openapi</title>
-      <link>https://www.changes.md/tags/openapi/</link>
+      <link>http://localhost:1313/tags/openapi/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/tags/openapi/</guid>
+      <guid>http://localhost:1313/tags/openapi/</guid>
       <description></description>
     </item>
     <item>
       <title>Swagger</title>
-      <link>https://www.changes.md/tags/swagger/</link>
+      <link>http://localhost:1313/tags/swagger/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/tags/swagger/</guid>
+      <guid>http://localhost:1313/tags/swagger/</guid>
       <description></description>
     </item>
   </channel>

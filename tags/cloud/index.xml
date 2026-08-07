@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud on CHANGES.md</title>
-    <link>https://www.changes.md/tags/cloud/</link>
+    <link>http://localhost:1313/tags/cloud/</link>
     <description>Recent content in Cloud on CHANGES.md</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 04 Feb 2024 20:51:50 +0100</lastBuildDate>
-    <atom:link href="https://www.changes.md/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Databend on AWS/EKS</title>
-      <link>https://www.changes.md/post/databend/</link>
+      <link>http://localhost:1313/post/databend/</link>
       <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/post/databend/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.changes.md/static/databend.png&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Over the Christmas silent period, I got my hands on &lt;a href=&#34;https://github.com/datafuselabs/databend&#34;&gt;Databend&lt;/a&gt;, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage. Benchmarks comparing its performance with alternative open-source solutions &lt;a href=&#34;https://benchmark.clickhouse.com/&#34;&gt;ClickBench&lt;/a&gt; and &lt;a href=&#34;https://medium.com/@databend/tpc-h-benchmark-databend-cloud-vs-snowflake-aa97971c32a0&#34;&gt;with cloud alternatives&lt;/a&gt; show some interesting results.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/post/databend/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/static/databend.png&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Over the Christmas silent period, I got my hands on &lt;a href=&#34;https://github.com/datafuselabs/databend&#34;&gt;Databend&lt;/a&gt;, a data warehousing solution intended to provide an easily scalable, cloud-first, SQL-based data engine. The keywords bingo speaks for itself: it&amp;rsquo;s written in Rust, friendly with containers/Kubernetes (k8s), elastically scalable, and uses Raft as a consensus algorithm instead of Paxos. In short, it fits all the last five years&amp;rsquo; fashion trends in data warehousing. What specifically appealed to me was the ability to use cloud object storage as a storage backend and the isolation between compute and storage. Benchmarks comparing its performance with alternative open-source solutions &lt;a href=&#34;https://benchmark.clickhouse.com/&#34;&gt;ClickBench&lt;/a&gt; and &lt;a href=&#34;https://medium.com/@databend/tpc-h-benchmark-databend-cloud-vs-snowflake-aa97971c32a0&#34;&gt;with cloud alternatives&lt;/a&gt; show some interesting results.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

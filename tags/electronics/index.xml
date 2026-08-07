@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Electronics on CHANGES.md</title>
-    <link>https://www.changes.md/tags/electronics/</link>
+    <link>http://localhost:1313/tags/electronics/</link>
     <description>Recent content in Electronics on CHANGES.md</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 28 Apr 2024 17:52:14 +0200</lastBuildDate>
-    <atom:link href="https://www.changes.md/tags/electronics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/electronics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3D-printed portal gun replica</title>
-      <link>https://www.changes.md/post/portal/</link>
+      <link>http://localhost:1313/post/portal/</link>
       <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/post/portal/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.changes.md/static/portal-gun.excalidraw.png&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Just finished my first large 3D-printing project.&#xA;For sure I couldn&amp;rsquo;t pass by when I saw &lt;a href=&#34;https://www.printables.com/model/217-portal-gun&#34;&gt;this amazing portal gun replica&lt;/a&gt; from &lt;a href=&#34;https://www.printables.com/@KirbyDowney_65&#34;&gt;@KirbyDowney_65&lt;/a&gt; on Printables.&#xA;Here I&amp;rsquo;d simply like to share some highlights and happy moments I had while doing it.&lt;/p&gt;&#xA;&lt;p&gt;I started by printing claws and assembling them, as they seemed the most fragile and tricky to assemble, but&#xA;not so time-consuming when printing.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.changes.md/static/claws-print.jpg&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;A few more printing sessions and the remaining black parts were also done:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/post/portal/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/static/portal-gun.excalidraw.png&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Just finished my first large 3D-printing project.&#xA;For sure I couldn&amp;rsquo;t pass by when I saw &lt;a href=&#34;https://www.printables.com/model/217-portal-gun&#34;&gt;this amazing portal gun replica&lt;/a&gt; from &lt;a href=&#34;https://www.printables.com/@KirbyDowney_65&#34;&gt;@KirbyDowney_65&lt;/a&gt; on Printables.&#xA;Here I&amp;rsquo;d simply like to share some highlights and happy moments I had while doing it.&lt;/p&gt;&#xA;&lt;p&gt;I started by printing claws and assembling them, as they seemed the most fragile and tricky to assemble, but&#xA;not so time-consuming when printing.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/static/claws-print.jpg&#34; alt=&#34;resource&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;A few more printing sessions and the remaining black parts were also done:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
