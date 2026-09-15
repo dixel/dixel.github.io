@@ -387,15 +387,6 @@
 <p>It felt like working alongside a thoughtful companion. Still much too agreeable at times. I would have welcomed a few more well-placed objections before the confident instructions. But thoughtful—and willing to revise its answer when the result contradicted it.</p>
 <p>That made the collaboration valuable. It did not settle the question I started with. My confidence in using AI grew during this project; knowing when that confidence is justified remains my responsibility. A machine correcting itself after a mistake is helpful. Whether a mistake is tolerable depends on what we have asked it to do.</p>
 <p>Here, we could try again. We ended up with a working object, and I finally had a better answer for why I had kept that box of parts.</p>
-<details class="reactor-under-hood">
-  <summary>For the curious: what connects to what</summary>
-  <p>The Pico reads the knob and right toggle, drives the LEDs and sends their input state to the Flipper over a pulse signal with a common ground. The Flipper reads the left toggle and button, runs the game, and drives its screen and built-in speaker.</p>
-  <p>For the browser view, USB carries game state to a native Python bridge. That bridge sends it to a local HTTP server, optionally running in Docker. The browser loads the artwork and polls the state. It observes; it does not control the game.</p>
-  <a href="/static/reactor-04/architecture.svg"><img src="/static/reactor-04/architecture.svg" alt="Hand-sketched system diagram showing physical controls, Pico, LEDs, Flipper, USB bridge, optional Docker HTTP server and browser, with the alternate standalone Web Serial path" width="1040" height="1330" loading="lazy" style="width:100%;height:auto"></a>
-  <p>The single-file HTML version uses Web Serial without a server. Its direct hardware permission flow still needs a manual check; the USB bridge route was tested with hardware. Gallery images are English-language art-demo captures, not a live playthrough. The earlier Flipper captures used temporary checkpoints with the original saves restored.</p>
-</details>
-<style>.reactor-under-hood{margin:32px 0;border-top:1px solid currentColor;border-bottom:1px solid currentColor;padding:16px 0}.reactor-under-hood summary{cursor:pointer;font-weight:bold}.reactor-under-hood p{font-size:.9em}</style>
-
 <p><em>First-person introduction and conclusion adapted by an AI assistant from Vasich’s own notes; the machine-narrated story was also written by the assistant at his request, from the build conversation, photographs and source code. The machine’s inner monologue is a narrative device, not a transcript. Vasich designed, printed, soldered, assembled, painted and directed the project; ChatGPT and Codex/Astra assisted with learning, substantial software implementation and debugging.</em></p>
 
       </div></div>
