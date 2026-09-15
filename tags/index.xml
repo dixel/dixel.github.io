@@ -1,96 +1,115 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on CHANGES.md</title>
-    <link>https://www.changes.md/tags/</link>
-    <description>Recent content in Tags on CHANGES.md</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 28 Apr 2024 17:52:14 +0200</lastBuildDate>
-    <atom:link href="https://www.changes.md/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>3D-Printing</title>
-      <link>https://www.changes.md/tags/3d-printing/</link>
-      <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/tags/3d-printing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Diy</title>
-      <link>https://www.changes.md/tags/diy/</link>
-      <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/tags/diy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Electronics</title>
-      <link>https://www.changes.md/tags/electronics/</link>
-      <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/tags/electronics/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hobby</title>
-      <link>https://www.changes.md/tags/hobby/</link>
-      <pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
-      <guid>https://www.changes.md/tags/hobby/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cloud</title>
-      <link>https://www.changes.md/tags/cloud/</link>
-      <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/tags/cloud/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Data</title>
-      <link>https://www.changes.md/tags/data/</link>
-      <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/tags/data/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Data-Engineering</title>
-      <link>https://www.changes.md/tags/data-engineering/</link>
-      <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/tags/data-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Databend</title>
-      <link>https://www.changes.md/tags/databend/</link>
-      <pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
-      <guid>https://www.changes.md/tags/databend/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Flipper</title>
-      <link>https://www.changes.md/tags/flipper/</link>
-      <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/tags/flipper/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Clojure</title>
-      <link>https://www.changes.md/tags/clojure/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/tags/clojure/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Openapi</title>
-      <link>https://www.changes.md/tags/openapi/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/tags/openapi/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Swagger</title>
-      <link>https://www.changes.md/tags/swagger/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.changes.md/tags/swagger/</guid>
-      <description></description>
-    </item>
-  </channel>
+	<channel>
+		<title>Tags on CHANGES.md</title>
+		<link>https://www.changes.md/tags/</link>
+		<description>Recent content in Tags on CHANGES.md</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0200</lastBuildDate>
+		
+			<atom:link href="https://www.changes.md/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>3D-Printing</title>
+				<link>https://www.changes.md/tags/3d-printing/</link>
+				<pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+				<guid>https://www.changes.md/tags/3d-printing/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Diy</title>
+				<link>https://www.changes.md/tags/diy/</link>
+				<pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+				<guid>https://www.changes.md/tags/diy/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Electronics</title>
+				<link>https://www.changes.md/tags/electronics/</link>
+				<pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+				<guid>https://www.changes.md/tags/electronics/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Embedded</title>
+				<link>https://www.changes.md/tags/embedded/</link>
+				<pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+				<guid>https://www.changes.md/tags/embedded/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Flipper</title>
+				<link>https://www.changes.md/tags/flipper/</link>
+				<pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+				<guid>https://www.changes.md/tags/flipper/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Human-Ai</title>
+				<link>https://www.changes.md/tags/human-ai/</link>
+				<pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+				<guid>https://www.changes.md/tags/human-ai/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Hobby</title>
+				<link>https://www.changes.md/tags/hobby/</link>
+				<pubDate>Sun, 28 Apr 2024 17:52:14 +0200</pubDate>
+				<guid>https://www.changes.md/tags/hobby/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cloud</title>
+				<link>https://www.changes.md/tags/cloud/</link>
+				<pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
+				<guid>https://www.changes.md/tags/cloud/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Data</title>
+				<link>https://www.changes.md/tags/data/</link>
+				<pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
+				<guid>https://www.changes.md/tags/data/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Data-Engineering</title>
+				<link>https://www.changes.md/tags/data-engineering/</link>
+				<pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
+				<guid>https://www.changes.md/tags/data-engineering/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Databend</title>
+				<link>https://www.changes.md/tags/databend/</link>
+				<pubDate>Sun, 04 Feb 2024 20:51:50 +0100</pubDate>
+				<guid>https://www.changes.md/tags/databend/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Clojure</title>
+				<link>https://www.changes.md/tags/clojure/</link>
+				<pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+				<guid>https://www.changes.md/tags/clojure/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Openapi</title>
+				<link>https://www.changes.md/tags/openapi/</link>
+				<pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+				<guid>https://www.changes.md/tags/openapi/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Swagger</title>
+				<link>https://www.changes.md/tags/swagger/</link>
+				<pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+				<guid>https://www.changes.md/tags/swagger/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

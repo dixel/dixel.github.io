@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Embedded on CHANGES.md</title>
+		<link>https://www.changes.md/tags/embedded/</link>
+		<description>Recent content in Embedded on CHANGES.md</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0200</lastBuildDate>
+		
+			<atom:link href="https://www.changes.md/tags/embedded/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Reactor 04: New Shift</title>
+				<link>https://www.changes.md/post/reactor-04-new-shift/</link>
+				<pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+				<guid>https://www.changes.md/post/reactor-04-new-shift/</guid>
+				<description>I could put the electronics back in the cellar, or finally build something. They became a reactor game. Here is my introduction—and the machine’s increasingly puzzled account.</description>
+			</item>
+	</channel>
+</rss>

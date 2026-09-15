@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="1330" viewBox="0 0 1040 1330"><defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#272c28" stroke-width="1.5"/></marker></defs><rect width="1040" height="1330" fill="#faf6e9"/><style>text{font-family:"Comic Sans MS","Chalkboard",sans-serif;fill:#272c28;font-size:21px}.title{font-size:31px;font-weight:bold}.small{font-size:18px}.label{font-size:23px;font-weight:bold}</style>
+<text x="36" y="45" class="title">REACTOR 04 / WHAT TALKS TO WHAT</text>
+<path d="M26,72 L1013,70 L1016,628 L24,630 Z" fill="#f6e8a4" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M29,69 L1017,73 M1018,75 L1014,633" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="44" y="104" class="label">THE YELLOW BOX  ·  custom printed enclosure + lid</text>
+<path d="M50,134 L435,132 L438,208 L48,210 Z" fill="#fffdf5" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M53,131 L439,135 M440,137 L436,213" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="64" y="163" class="">Big printed knob + potentiometer</text>
+<text x="64" y="191" class="">Right toggle: CHAOS</text>
+<path d="M577,134 L982,132 L985,208 L575,210 Z" fill="#fffdf5" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M580,131 L986,135 M987,137 L983,213" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="592" y="163" class="">Left toggle + push button</text>
+<text x="592" y="191" class="">Start / engage / emergency</text>
+<path d="M240,212 L239,270" fill="none" stroke="#272c28" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="55" y="243" class="small">GP26 / GP16</text>
+<path d="M780,212 L778,270" fill="none" stroke="#272c28" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="802" y="246" class="small">A7 / B3</text>
+<path d="M50,277 L435,275 L438,423 L48,425 Z" fill="#fffdf5" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M53,274 L439,278 M440,280 L436,428" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="65" y="311" class="label">RASPBERRY PI PICO</text>
+<text x="65" y="343" class="">MicroPython: read knob + switch</text>
+<text x="65" y="374" class="">Animate ten LEDs</text>
+<text x="65" y="405" class="">PIO: send percentage + CHAOS flag</text>
+<path d="M577,277 L982,275 L985,423 L575,425 Z" fill="#fffdf5" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M580,274 L986,278 M987,280 L983,428" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="593" y="311" class="label">FLIPPER ZERO</text>
+<text x="593" y="343" class="">C game: story + puzzle state</text>
+<text x="593" y="374" class="">Screen + built-in speaker</text>
+<text x="593" y="405" class="">USB telemetry output</text>
+<path d="M439,326 L570,327" fill="none" stroke="#272c28" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="448" y="308" class="small">GP15 → C3</text>
+<text x="456" y="354" class="small">pulses</text>
+<path d="M242,427 L243,492" fill="none" stroke="#272c28" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="58" y="460" class="small">GP0–GP9</text>
+<path d="M50,500 L435,498 L438,570 L48,572 Z" fill="#fffdf5" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M53,497 L439,501 M440,503 L436,575" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="65" y="529" class="">10 discrete LEDs</text>
+<text x="65" y="556" class="">Each has its own resistor</text>
+<text x="570" y="470" class="">Signal wire + common GND</text>
+<text x="570" y="500" class="">3.3 V logic only</text>
+<text x="570" y="530" class="">Pico powered separately over USB</text>
+<text x="48" y="607" class="label">The browser watches. Game decisions stay on the Flipper.</text>
+<path d="M784,632 L785,691" fill="none" stroke="#272c28" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="395" y="668" class="small">USB cable: serial JSON + Flipper power</text>
+<path d="M26,701 L1013,699 L1016,1131 L24,1133 Z" fill="#e9eee5" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M29,698 L1017,702 M1018,704 L1014,1136" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="45" y="735" class="label">ON THE COMPUTER / SERVER ROUTE</text>
+<path d="M577,762 L982,760 L985,853 L575,855 Z" fill="#fffdf5" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M580,759 L986,763 M987,765 L983,858" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="593" y="795" class="label">Native Python USB bridge</text>
+<text x="593" y="827" class="">Reads the secondary serial port</text>
+<path d="M574,807 L440,808" fill="none" stroke="#272c28" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="455" y="784" class="small">HTTP POST</text>
+<path d="M50,762 L435,760 L438,903 L48,905 Z" fill="#fffdf5" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M53,759 L439,763 M440,765 L436,908" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="65" y="795" class="label">DOCKER CONTAINER</text>
+<text x="65" y="827" class="">Python HTTP server</text>
+<text x="65" y="858" class="">Latest game state + web assets</text>
+<text x="65" y="888" class="small">Docker is optional</text>
+<path d="M242,907 L242,973" fill="none" stroke="#272c28" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="268" y="943" class="small">HTML / JS + polled JSON</text>
+<path d="M50,980 L982,978 L985,1090 L48,1092 Z" fill="#fffdf5" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M53,977 L986,981 M987,983 L983,1095" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="65" y="1014" class="label">BROWSER: PIXEL-ART OBSERVATION ROOM</text>
+<text x="65" y="1046" class="">Reactor view · EN / RU dialogue · aiming targets · safe clues</text>
+<text x="65" y="1076" class="">Physical controls drive the game; the page mirrors its state.</text>
+<text x="47" y="1169" class="label">OR: ONE HTML FILE / NO SERVER</text>
+<path d="M50,1192 L982,1190 L985,1280 L48,1282 Z" fill="#eee5d4" stroke="#272c28" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M53,1189 L986,1193 M987,1195 L983,1285" fill="none" stroke="#272c28" opacity=".32"/>
+<text x="65" y="1224" class="">Flipper USB → browser Web Serial → the same observation room</text>
+<text x="65" y="1257" class="small">Implemented; direct hardware permission flow still needs a manual check.</text>
+<text x="48" y="1310" class="small">Connections verified from source. Hand-sketched style; not a wiring schematic.</text>
+</svg>

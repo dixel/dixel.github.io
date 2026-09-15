@@ -25,7 +25,6 @@ I had this approach in mind since I&rsquo;ve started working in a small payment 
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.changes.md/img/apple-touch-icon-144-precomposed.png">
 
 <link rel="shortcut icon" href="https://www.changes.md/img/favicon/green.png">
 
@@ -62,7 +61,8 @@ I had this approach in mind since I&rsquo;ve started working in a small payment 
 
 
 
-
+<script defer src="https://surftrack.io/analytics/script.js"
+  data-website-id="d97aa190-1921-4953-90e1-a6f3626a6f1b"></script>
 
 
 </head>
@@ -89,30 +89,34 @@ I had this approach in mind since I&rsquo;ve started working in a small payment 
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="/about/">About</a></li>
+        
+      
+        
+          <li><a href="/freelance/">Freelance</a></li>
+        
+      
+        
+          <li><a href="/post/">Writing</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dixel">GitHub</a></li>
         
       
         
           <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
         
       
-        
-          <li><a href="/freelance">Freelance</a></li>
-        
-      
-        
-          <li><a href="https://github.com/dixel">Github</a></li>
-        
-      
-        
-          <li><a href="https://mastodon.social/@dixel">Mastodon</a></li>
-        
-      
       
         <ul class="menu__sub-inner">
-          <li class="menu__sub-inner-more-trigger"> ▾</li>
+          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
 
           <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="https://mastodon.social/@dixel">Mastodon</a></li>
+              
             
               
                 <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
@@ -133,19 +137,23 @@ I had this approach in mind since I&rsquo;ve started working in a small payment 
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="/about/">About</a></li>
+      
+    
+      
+        <li><a href="/freelance/">Freelance</a></li>
+      
+    
+      
+        <li><a href="/post/">Writing</a></li>
+      
+    
+      
+        <li><a href="https://github.com/dixel">GitHub</a></li>
       
     
       
         <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
-      
-    
-      
-        <li><a href="/freelance">Freelance</a></li>
-      
-    
-      
-        <li><a href="https://github.com/dixel">Github</a></li>
       
     
       
@@ -222,7 +230,7 @@ At that point after learning some Clojure syntax, concepts of <a href="https://g
 HTTP server abstractions and developing a couple of applications with <a href="https://github.com/weavejester/compojure">compojure router</a>,
 having compojure-api felt like a natural choice for embedding swagger into your code.</p>
 <h4 id="usage">Usage<a href="#usage" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lein new compojure-api +clojure-test newproject
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lein new compojure-api +clojure-test newproject
 </span></span></code></pre></div><h4 id="advantages">++advantages++<a href="#advantages" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>Fits pretty well into existing ring-based ecosystem.</li>
@@ -230,7 +238,7 @@ having compojure-api felt like a natural choice for embedding swagger into your 
 <li>Easy to start with, no need to leave Clojure editor.</li>
 <li>Async requests support (<a href="https://github.com/clojure/core.async">core.async</a>, <a href="https://github.com/ztellman/manifold">manifold</a>)</li>
 </ul>
-<h4 id="--disadvantages--">&ndash;disadvantages&ndash;<a href="#--disadvantages--" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<h4 id="disadvantages">&ndash;disadvantages&ndash;<a href="#disadvantages" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>A DSL is used for generating the API specification.
 It can diverge from the features implemented by OpenAPI
@@ -242,7 +250,7 @@ or contribute to the project.</li>
 </ul>
 <h3 id="1-swagger1st">1. Swagger1st<a href="#1-swagger1st" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><a href="https://github.com/zalando-stups/swagger1st">github</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lein new swagger1st newproject
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lein new swagger1st newproject
 </span></span></code></pre></div><p>Used this library when working in zalando, I am still quite happy with it. As it comes from the title, swagger1st encourages you to first write
 swagger <a href="https://swagger.io/specification/">definition</a>, use operationId as the link to the handler function. Having a swagger definition
 at hand this library was the first choice for me when prototyping RESTful applications.</p>
@@ -251,7 +259,7 @@ at hand this library was the first choice for me when prototyping RESTful applic
 <li>API-first approach for real. You may take the swagger.yaml file from another team and bootstrap the prototype in no time.</li>
 <li>Very simple and pluggable into any other ring ecosystem.</li>
 </ul>
-<h4 id="--disadvantages---1">&ndash;disadvantages&ndash;<a href="#--disadvantages---1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<h4 id="disadvantages-1">&ndash;disadvantages&ndash;<a href="#disadvantages-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>No automatic schema validation. This sometimes becomes a burden, since writing custom validators requires interaction with path definitions and parameters.
 Since the latter are defined only in the spec, validating the parameters/response requires writing/defining additional logic in handlers that can
@@ -273,7 +281,7 @@ I really want to give it a try, at the first glance, this is my pros/cons list f
 <li>Pluggable extensions.</li>
 <li>Maintained by Metosin.</li>
 </ul>
-<h4 id="--disadvantages---2">&ndash;disadvantages&ndash;<a href="#--disadvantages---2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<h4 id="disadvantages-2">&ndash;disadvantages&ndash;<a href="#disadvantages-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ul>
 <li>Becomes quite heavy and requires a number of opinionated libraries.
 This is a bit too of a personal opinion, but what I absolutely enjoyed in the Clojure community from the very beginning was
@@ -291,7 +299,7 @@ Hope this overview of 3 solutions that help achieving API-first approach with Cl
   <div class="pagination">
     <div class="pagination__title">
       <span
-        class="pagination__title-h"></span>
+        class="pagination__title-h">Read other posts</span>
       <hr />
     </div>
     <div class="pagination__buttons">
