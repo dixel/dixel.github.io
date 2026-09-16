@@ -1,0 +1,9 @@
+.blog-comments { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--accent, #78e2a0); }
+.blog-comments [hidden] { display: none !important; }
+.blog-comments { --waline-theme-color: #78e2a0; --waline-active-color: #a4ecc0; --waline-color: #ececec; --waline-bg-color: #1d1e28; --waline-bg-color-light: #252630; --waline-bg-color-hover: #30323e; --waline-border-color: #585b66; --waline-font-size: 16px; --waline-font-family: inherit; --waline-white: #1d1e28; }
+.blog-comments .wl-panel { margin-top: 1.5rem; }
+.blog-comments .wl-reaction { flex-wrap: wrap; }
+.blog-comments .wl-reaction img { display: inline-block; margin: 0; }
+.blog-comments .comments-status:empty { display: none; }
+/* Terminal decorates every list item with an arrow, including widget controls. */
+.blog-comments li::before { content: none !important; }
