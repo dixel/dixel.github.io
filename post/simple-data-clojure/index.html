@@ -1,368 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-    <title>Simple data-driven applications in Clojure :: CHANGES.md</title>
-  
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&rsquo;s an example on how things can work out in clojure.
+<!doctype html><html lang=en><head><title>Simple data-driven applications in Clojure · CHANGES.md</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&rsquo;s an example on how things can work out in clojure.
 Let&rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.
-"/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
-<link rel="canonical" href="https://www.changes.md/post/simple-data-clojure/" />
-
-
-
-
-<link rel="stylesheet" href="https://www.changes.md/assets/style.css">
-
-  <link rel="stylesheet" href="https://www.changes.md/assets/green.css">
-
-
-
-
-
-
-
-<link rel="shortcut icon" href="https://www.changes.md/img/favicon/green.png">
-
-
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Simple data-driven applications in Clojure :: CHANGES.md — " />
-<meta name="twitter:description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&rsquo;s an example on how things can work out in clojure.
+"><meta name=keywords content><meta name=robots content="noodp"><link rel=canonical href=https://www.changes.md/post/simple-data-clojure/><link rel=stylesheet href=/css/syntax.css><link rel=stylesheet href=/css/consultant.css><link rel="shortcut icon" href=https://www.changes.md/img/favicon/green.png><meta name=twitter:card content="summary"><meta name=twitter:title content="Simple data-driven applications in Clojure :: CHANGES.md — "><meta name=twitter:description content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&rsquo;s an example on how things can work out in clojure.
 Let&rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.
-" />
-<meta name="twitter:site" content="https://www.changes.md/" />
-<meta name="twitter:creator" content="" />
-<meta name="twitter:image" content="">
-
-
-<meta property="og:locale" content="en" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Simple data-driven applications in Clojure :: CHANGES.md — ">
-<meta property="og:description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&rsquo;s an example on how things can work out in clojure.
+"><meta name=twitter:site content="https://www.changes.md/"><meta name=twitter:creator content><meta name=twitter:image content><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Simple data-driven applications in Clojure :: CHANGES.md — "><meta property="og:description" content="Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api. Just getting the tooling right sometimes may be troublesome. Here&rsquo;s an example on how things can work out in clojure.
 Let&rsquo;s say we have an SQL-based engine like Presto (or Presto) as the main interface to the datalake. Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.
-" />
-<meta property="og:url" content="https://www.changes.md/post/simple-data-clojure/" />
-<meta property="og:site_name" content="Simple data-driven applications in Clojure" />
-<meta property="og:image" content="">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-
-<meta property="article:published_time" content="2019-04-06 23:44:14 &#43;0200 CEST" />
-
-
-
-
-
-
-
-
-<script defer src="https://surftrack.io/analytics/script.js"
-  data-website-id="d97aa190-1921-4953-90e1-a6f3626a6f1b"></script>
-
-
-</head>
-<body class="">
-
-
-<div class="container headings--one-size">
-
-  <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/">
-  <div class="logo">
-    CHANGES.md
-  </div>
-</a>
-
-    </div>
-    <div class="menu-trigger">menu</div>
-  </div>
-  
-    <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
-    
-      
-        
-          <li><a href="/about/">About</a></li>
-        
-      
-        
-          <li><a href="/freelance/">Freelance</a></li>
-        
-      
-        
-          <li><a href="/post/">Writing</a></li>
-        
-      
-        
-          <li><a href="https://github.com/dixel">GitHub</a></li>
-        
-      
-        
-          <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
-        
-      
-      
-        <ul class="menu__sub-inner">
-          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
-
-          <ul class="menu__sub-inner-more hidden">
-            
-              
-                <li><a href="https://mastodon.social/@dixel">Mastodon</a></li>
-              
-            
-              
-                <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
-              
-            
-              
-                <li><a href="https://twitter.com/dixelt">Twitter</a></li>
-              
-            
-          </ul>
-        </ul>
-      
-    
-
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/about/">About</a></li>
-      
-    
-      
-        <li><a href="/freelance/">Freelance</a></li>
-      
-    
-      
-        <li><a href="/post/">Writing</a></li>
-      
-    
-      
-        <li><a href="https://github.com/dixel">GitHub</a></li>
-      
-    
-      
-        <li><a href="https://dixel.bandcamp.com/">Bandcamp</a></li>
-      
-    
-      
-        <li><a href="https://mastodon.social/@dixel">Mastodon</a></li>
-      
-    
-      
-        <li><a href="https://soundcloud.com/saved-messages">SoundCloud</a></li>
-      
-    
-      
-        <li><a href="https://twitter.com/dixelt">Twitter</a></li>
-      
-    
-    
-  </ul>
-</nav>
-
-  
-</header>
-
-
-  <div class="content">
-    
-<div class="post">
-  <h1 class="post-title">
-    <a href="https://www.changes.md/post/simple-data-clojure/">Simple data-driven applications in Clojure</a></h1>
-  <div class="post-meta">
-      
-    <span class="post-date">
-      2019-04-06
-    </span>
-    
-    
-  </div>
-
-  
-
-  
-
-  <div class="post-content"><div>
-        <p>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api.
+"><meta property="og:url" content="https://www.changes.md/post/simple-data-clojure/"><meta property="og:site_name" content="Simple data-driven applications in Clojure"><meta property="og:image" content><meta property="og:image:width" content="2048"><meta property="og:image:height" content="1024"><meta property="article:published_time" content="2019-04-06 23:44:14 +0200 CEST"><script defer src=https://surftrack.io/analytics/script.js data-website-id=d97aa190-1921-4953-90e1-a6f3626a6f1b></script></head><body><a class=skip-link href=#main>Skip to content</a><header class="site-header wrap"><a class=wordmark href=/ aria-label="CHANGES.md home">changes<span>.md</span><span class=cursor aria-hidden=true>_</span></a><nav aria-label="Main navigation"><a href=/freelance/>Work with me</a>
+<a href=/post/ aria-current=page>Writing</a>
+<a href=/about/>About</a>
+<a class=nav-contact href=https://linkedin.com/in/vasiliy-avdiushkin-8b052637>Get in touch <span aria-hidden=true>↗</span></a></nav></header><main id=main><article class="article wrap"><header class=article-header><p class=eyebrow>FIELD NOTES / 06 Apr 2019 / 4 MIN READ</p><h1>Simple data-driven applications in Clojure</h1></header><div class=prose><p>Sometimes the information from the data lake/warehouse/pond/whatever simply needs to be exposed via the REST-api.
 Just getting the tooling right sometimes may be troublesome.
-Here&rsquo;s an example on how things can work out in clojure.</p>
-<p>Let&rsquo;s say we have an SQL-based engine like <a href="https://prestosql.io/">Presto</a> (or <a href="https://prestodb.github.io/">Presto</a>)
+Here&rsquo;s an example on how things can work out in clojure.</p><p>Let&rsquo;s say we have an SQL-based engine like <a href=https://prestosql.io/>Presto</a> (or <a href=https://prestodb.github.io/>Presto</a>)
 as the main interface to the datalake.
-Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</p>
-<ol>
-<li>Getting started with a small template (ring application with presto driver managed by mount).</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lein new ferry62 changes +presto
-</span></span></code></pre></div><ol start="2">
-<li>Checking the project structure.</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">.
-</span></span><span class="line"><span class="cl">├── dev
-</span></span><span class="line"><span class="cl">│   └── user.clj         <span class="c1"># REPL (helpers to get best UX from REPL-driven development)</span>
-</span></span><span class="line"><span class="cl">├── Dockerfile
-</span></span><span class="line"><span class="cl">├── project.clj
-</span></span><span class="line"><span class="cl">├── README.md
-</span></span><span class="line"><span class="cl">├── resources
-</span></span><span class="line"><span class="cl">│   └── queries
-</span></span><span class="line"><span class="cl">│       └── example.sql  <span class="c1"># SQL templates</span>
-</span></span><span class="line"><span class="cl">├── src
-</span></span><span class="line"><span class="cl">│   └── changes
-</span></span><span class="line"><span class="cl">│       ├── api.clj      <span class="c1"># API routing (&#34;/path&#34; -&gt; handler mappings)</span>
-</span></span><span class="line"><span class="cl">│       ├── core.clj
-</span></span><span class="line"><span class="cl">│       ├── handlers.clj
-</span></span><span class="line"><span class="cl">│       └── presto.clj
-</span></span></code></pre></div><p>You won&rsquo;t see to much of Clojure code here. It is mainly defined by it&rsquo;s interfaces:</p>
-<ul>
-<li>Data source (presto engine)</li>
-<li>API</li>
-</ul>
-<p>Easy!</p>
-<img src="/static/app.png" alt="resource"><p>Even if you never worked with Clojure, it&rsquo;s quite easy to get started. Once you fight your way through the syntax, you
+Let&rsquo;s check how we can leverage the power of Clojure to build a simple application for fetching the data from Presto.</p><ol><li>Getting started with a small template (ring application with presto driver managed by mount).</li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>lein new ferry62 changes +presto
+</span></span></code></pre></div><ol start=2><li>Checking the project structure.</li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>.
+</span></span><span class=line><span class=cl>├── dev
+</span></span><span class=line><span class=cl>│   └── user.clj         <span class=c1># REPL (helpers to get best UX from REPL-driven development)</span>
+</span></span><span class=line><span class=cl>├── Dockerfile
+</span></span><span class=line><span class=cl>├── project.clj
+</span></span><span class=line><span class=cl>├── README.md
+</span></span><span class=line><span class=cl>├── resources
+</span></span><span class=line><span class=cl>│   └── queries
+</span></span><span class=line><span class=cl>│       └── example.sql  <span class=c1># SQL templates</span>
+</span></span><span class=line><span class=cl>├── src
+</span></span><span class=line><span class=cl>│   └── changes
+</span></span><span class=line><span class=cl>│       ├── api.clj      <span class=c1># API routing (&#34;/path&#34; -&gt; handler mappings)</span>
+</span></span><span class=line><span class=cl>│       ├── core.clj
+</span></span><span class=line><span class=cl>│       ├── handlers.clj
+</span></span><span class=line><span class=cl>│       └── presto.clj
+</span></span></code></pre></div><p>You won&rsquo;t see to much of Clojure code here. It is mainly defined by it&rsquo;s interfaces:</p><ul><li>Data source (presto engine)</li><li>API</li></ul><p>Easy!</p><img src=/static/app-dark.png alt="Application architecture connecting Presto, SQL queries, Clojure handlers, and HTTP routes."><p>Even if you never worked with Clojure, it&rsquo;s quite easy to get started. Once you fight your way through the syntax, you
 may realise that there are not so many things happening in the application apart from what you actually wanted to do - link
-your data source to the API.</p>
-<p>Let&rsquo;s get our hands dirty!</p>
-<p>First you&rsquo;d need to install <a href="https://leiningen.org/">leiningen</a> - the tool for building Clojure projects and managing project dependencies.</p>
-<p>You can do it with <code>brew</code> in Mac, or by simply following the instructions on the website to install it as a script.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lein run
-</span></span><span class="line"><span class="cl">curl http://localhost:4040/ping
-</span></span></code></pre></div><p>And if you&rsquo;re into <a href="https://clojure.org/guides/repl/introduction">REPL</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lein repl
-</span></span></code></pre></div><p>You can docker-compose yourself an hdfs+hive+presto setup locally:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/big-data-europe/docker-hive
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> docker-hive
-</span></span><span class="line"><span class="cl">docker-compose up -d
-</span></span><span class="line"><span class="cl"><span class="c1"># ... wait until presto server starts</span>
-</span></span></code></pre></div><p>&hellip; and start exploring the storage and run the operations against it</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">start</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">presto-query</span> <span class="s">&#34;SELECT 1&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">; -&gt; {:col0 1}</span>
+your data source to the API.</p><p>Let&rsquo;s get our hands dirty!</p><p>First you&rsquo;d need to install <a href=https://leiningen.org/>leiningen</a> - the tool for building Clojure projects and managing project dependencies.</p><p>You can do it with <code>brew</code> in Mac, or by simply following the instructions on the website to install it as a script.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>lein run
+</span></span><span class=line><span class=cl>curl http://localhost:4040/ping
+</span></span></code></pre></div><p>And if you&rsquo;re into <a href=https://clojure.org/guides/repl/introduction>REPL</a>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>lein repl
+</span></span></code></pre></div><p>You can docker-compose yourself an hdfs+hive+presto setup locally:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git clone https://github.com/big-data-europe/docker-hive
+</span></span><span class=line><span class=cl><span class=nb>cd</span> docker-hive
+</span></span><span class=line><span class=cl>docker-compose up -d
+</span></span><span class=line><span class=cl><span class=c1># ... wait until presto server starts</span>
+</span></span></code></pre></div><p>&mldr; and start exploring the storage and run the operations against it</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-scheme data-lang=scheme><span class=line><span class=cl><span class=p>(</span><span class=nf>start</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>(</span><span class=nf>presto-query</span> <span class=s>&#34;SELECT 1&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1>; -&gt; {:col0 1}</span>
 </span></span></code></pre></div><p>Let&rsquo;s get a bit behind the scenes of what actually happened here.
-<code>(start)</code> is a function call that tells <a href="https://github.com/tolitius/mount">mount</a> to start the applicatoin.
+<code>(start)</code> is a function call that tells <a href=https://github.com/tolitius/mount>mount</a> to start the applicatoin.
 Mount is very compact component management library pursuing the goal of having minimal feasible way of
 managing statefull components of your application. I personally really like this approach for both REPL-driven
-development process and also for managing artifacts.</p>
-<p>In our scenario there are only two components: the API and the database connection.</p>
-<p><code>presto-query</code> is a helper function that&rsquo;s intended to simplify the process of working with the data from REPL.</p>
-<p>At this point we simply started our application and made sure that our Presto connector works.</p>
-<p>What if we&rsquo;d actually want to enrich our application with new functionality?</p>
-<p>Here <a href="https://www.hugsql.org/">hugsql</a> comes into play and allows you to structure the interactions with your database in a form of
-template queries.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- resources/queries/example.sql
-</span></span></span><span class="line"><span class="cl"><span class="c1">-- :name sample-fields-query :? :1
-</span></span></span><span class="line"><span class="cl"><span class="c1">-- :doc sample fields echo query
-</span></span></span><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">:</span><span class="n">name</span><span class="w">   </span><span class="k">AS</span><span class="w"> </span><span class="n">name</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,:</span><span class="n">age</span><span class="w">   </span><span class="k">AS</span><span class="w"> </span><span class="n">age</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">,:</span><span class="nb">date</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">datem</span><span class="w">
-</span></span></span></code></pre></div><p>Here is the way those functions can be rendered:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">hugsql/def-sqlvec-fns</span> <span class="s">&#34;queries/example.sql&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>Here&rsquo;s the example of using the rendered template functions:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl"><span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">db-vec</span>    <span class="p">(</span><span class="nf">presto/sample-fields-query-sqlvec</span>
-</span></span><span class="line"><span class="cl">                 <span class="err">{</span><span class="nv">:name</span> <span class="s">&#34;Banana&#34;</span> <span class="nv">:age</span> <span class="mi">25</span> <span class="nv">:date</span> <span class="s">&#34;2018-11-11&#34;</span><span class="err">}</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">      <span class="nv">db-result</span> <span class="p">(</span><span class="nf">presto/query-cached</span> <span class="nv">db-vec</span><span class="p">)]</span>
-</span></span></code></pre></div><p>API routing is simply defined as a case statement in <code>api.clj</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl"><span class="p">(</span><span class="k">case </span><span class="p">(</span><span class="nf">:uri</span> <span class="nv">request</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="s">&#34;/sample&#34;</span>  <span class="p">(</span><span class="nf">handlers/sample-fields</span> <span class="nv">request</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="s">&#34;/ping&#34;</span> <span class="p">(</span><span class="nf">handlers/pong</span> <span class="nv">request</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="err">{</span><span class="nv">:status</span> <span class="mi">400</span> <span class="nv">:body</span> <span class="p">(</span><span class="nf">str</span> <span class="s">&#34;bad request: &#34;</span> <span class="p">(</span><span class="nf">:uri</span> <span class="nv">request</span><span class="p">))</span><span class="err">}</span><span class="p">)</span>
-</span></span></code></pre></div><p>The API handler functions do nothing but convert one data structure into another.</p>
-<p>I think this is the main selling point of Ring-based applications, if you want, you can manage completely
-immutable codebase for your API handlers.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">defn</span> <span class="nv">pong</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nv">request</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="err">{</span><span class="nv">:status</span> <span class="mi">200</span>
-</span></span><span class="line"><span class="cl">   <span class="nv">:body</span> <span class="err">{</span><span class="nv">:result</span> <span class="nv">:pong</span><span class="err">}</span>
-</span></span><span class="line"><span class="cl">   <span class="nv">:headers</span> <span class="err">{</span><span class="s">&#34;Content-Type&#34;</span> <span class="s">&#34;application/json&#34;</span><span class="err">}}</span><span class="p">)</span>
-</span></span></code></pre></div><p>Those are the main points where the application may be extended.</p>
-<ul>
-<li>api.clj - for adding new routes</li>
-<li>handlers.clj - for the data transformation/mapping of the API requests to the database queries</li>
-<li>*.sql resources file - for managing the database queries</li>
-</ul>
-<p>In a follow-up posts I&rsquo;ll explain how to use different REST (or GraphQL) backends
-and handle other storage solutions.</p>
-
-      </div></div>
-  
-  <div class="pagination">
-    <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
-    </div>
-    <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="https://www.changes.md/post/stuff/">
-          <span class="button__icon">←</span>
-          <span class="button__text">Complicated data-driven applications</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="https://www.changes.md/post/2019-03-30-3-clojure-swagger/">
-          <span class="button__text">3 libraries to work with swagger in Clojure</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
-    </div>
-  </div>
-  
-
-  
-
-<section class="blog-comments" aria-labelledby="comments-title" data-server="https://comments.changes.md" data-path="/post/simple-data-clojure/">
-  <h2 id="comments-title">Reactions &amp; discussion</h2>
-  <p>No account needed. Comments are reviewed before appearing.</p>
-  <button type="button" class="comments-load">Load reactions &amp; comments</button>
-  <p class="comments-status" role="status" aria-live="polite"></p>
-  <div id="waline"></div>
-  <noscript>JavaScript is needed to load reactions and comments.</noscript>
-</section>
-<link rel="stylesheet" href="/vendor/waline/3.15.2/waline.css">
-<link rel="stylesheet" href="/css/comments.css">
-<script type="module" src="/js/comments.js"></script>
-
-
-</div>
-
-  </div>
-
-  
-    <footer class="footer">
-  <div class="footer__inner">
-    
-      <div class="copyright">
-        <span>© 2026 Powered by <a href="http://gohugo.io">Hugo</a></span>
-    
-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
-      </div>
-  </div>
-</footer>
-
-<script src="https://www.changes.md/assets/main.js"></script>
-<script src="https://www.changes.md/assets/prism.js"></script>
-
-
-
-
-
-  
-</div>
-
-</body>
-</html>
+development process and also for managing artifacts.</p><p>In our scenario there are only two components: the API and the database connection.</p><p><code>presto-query</code> is a helper function that&rsquo;s intended to simplify the process of working with the data from REPL.</p><p>At this point we simply started our application and made sure that our Presto connector works.</p><p>What if we&rsquo;d actually want to enrich our application with new functionality?</p><p>Here <a href=https://www.hugsql.org/>hugsql</a> comes into play and allows you to structure the interactions with your database in a form of
+template queries.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=c1>-- resources/queries/example.sql
+</span></span></span><span class=line><span class=cl><span class=c1>-- :name sample-fields-query :? :1
+</span></span></span><span class=line><span class=cl><span class=c1>-- :doc sample fields echo query
+</span></span></span><span class=line><span class=cl><span class=k>SELECT</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=p>:</span><span class=n>name</span><span class=w>   </span><span class=k>AS</span><span class=w> </span><span class=n>name</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=p>,:</span><span class=n>age</span><span class=w>   </span><span class=k>AS</span><span class=w> </span><span class=n>age</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=p>,:</span><span class=nb>date</span><span class=w>  </span><span class=k>AS</span><span class=w> </span><span class=n>datem</span><span class=w>
+</span></span></span></code></pre></div><p>Here is the way those functions can be rendered:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-scheme data-lang=scheme><span class=line><span class=cl><span class=p>(</span><span class=nf>hugsql/def-sqlvec-fns</span> <span class=s>&#34;queries/example.sql&#34;</span><span class=p>)</span>
+</span></span></code></pre></div><p>Here&rsquo;s the example of using the rendered template functions:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-scheme data-lang=scheme><span class=line><span class=cl><span class=p>(</span><span class=k>let </span><span class=p>[</span><span class=nv>db-vec</span>    <span class=p>(</span><span class=nf>presto/sample-fields-query-sqlvec</span>
+</span></span><span class=line><span class=cl>                 <span class=err>{</span><span class=nv>:name</span> <span class=s>&#34;Banana&#34;</span> <span class=nv>:age</span> <span class=mi>25</span> <span class=nv>:date</span> <span class=s>&#34;2018-11-11&#34;</span><span class=err>}</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=nv>db-result</span> <span class=p>(</span><span class=nf>presto/query-cached</span> <span class=nv>db-vec</span><span class=p>)]</span>
+</span></span></code></pre></div><p>API routing is simply defined as a case statement in <code>api.clj</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-scheme data-lang=scheme><span class=line><span class=cl><span class=p>(</span><span class=k>case </span><span class=p>(</span><span class=nf>:uri</span> <span class=nv>request</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=s>&#34;/sample&#34;</span>  <span class=p>(</span><span class=nf>handlers/sample-fields</span> <span class=nv>request</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=s>&#34;/ping&#34;</span> <span class=p>(</span><span class=nf>handlers/pong</span> <span class=nv>request</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=err>{</span><span class=nv>:status</span> <span class=mi>400</span> <span class=nv>:body</span> <span class=p>(</span><span class=nf>str</span> <span class=s>&#34;bad request: &#34;</span> <span class=p>(</span><span class=nf>:uri</span> <span class=nv>request</span><span class=p>))</span><span class=err>}</span><span class=p>)</span>
+</span></span></code></pre></div><p>The API handler functions do nothing but convert one data structure into another.</p><p>I think this is the main selling point of Ring-based applications, if you want, you can manage completely
+immutable codebase for your API handlers.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-scheme data-lang=scheme><span class=line><span class=cl><span class=p>(</span><span class=nf>defn</span> <span class=nv>pong</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nv>request</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=err>{</span><span class=nv>:status</span> <span class=mi>200</span>
+</span></span><span class=line><span class=cl>   <span class=nv>:body</span> <span class=err>{</span><span class=nv>:result</span> <span class=nv>:pong</span><span class=err>}</span>
+</span></span><span class=line><span class=cl>   <span class=nv>:headers</span> <span class=err>{</span><span class=s>&#34;Content-Type&#34;</span> <span class=s>&#34;application/json&#34;</span><span class=err>}}</span><span class=p>)</span>
+</span></span></code></pre></div><p>Those are the main points where the application may be extended.</p><ul><li>api.clj - for adding new routes</li><li>handlers.clj - for the data transformation/mapping of the API requests to the database queries</li><li>*.sql resources file - for managing the database queries</li></ul><p>In a follow-up posts I&rsquo;ll explain how to use different REST (or GraphQL) backends
+and handle other storage solutions.</p></div><aside class=article-contact>I’m also available for contract work. <a href=/freelance/>Working with me ↗</a></aside><section class=blog-comments aria-labelledby=comments-title data-server=https://comments.changes.md data-path=/post/simple-data-clojure/><h2 id=comments-title>Reactions & discussion</h2><p>No account needed. Comments are reviewed before appearing.</p><button type=button class=comments-load>Load reactions & comments</button><p class=comments-status role=status aria-live=polite></p><div id=waline></div><noscript>JavaScript is needed to load reactions and comments.</noscript></section><link rel=stylesheet href=/vendor/waline/3.15.2/waline.css><link rel=stylesheet href=/css/comments.css><script type=module src=/js/comments.js></script></article></main><footer class="site-footer wrap"><div><a class=wordmark href=/>changes<span>.md</span></a><p>Vasilii Avdiushkin · Hamburg, Germany</p></div><div class=footer-links><a href=https://github.com/dixel>GitHub ↗</a><a href=https://linkedin.com/in/vasiliy-avdiushkin-8b052637>LinkedIn ↗</a><a href=/index.xml>RSS ↗</a><a href=https://dixel.bandcamp.com/>Music ↗</a></div><small>© 2026 · Built with Hugo.</small></footer></body></html>
