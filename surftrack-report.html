@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Surftrack · live report</title><meta name="robots" content="noindex,nofollow"><link rel="icon" href="/img/favicon/green.png"></head><body><noscript>Enable JavaScript to view the local Surftrack journey report.</noscript>
+<script src="/lib/ascii-graphs-1.5.1.js"></script>
+<script>
+(function () {
+  var id = decodeURIComponent((location.hash || '').replace(/^#/, '')) || 'default';
+  document.open();
+  document.write(SurftrackAscii.reportHTML(id));
+  document.close();
+})();
+</script>
+</body></html>
